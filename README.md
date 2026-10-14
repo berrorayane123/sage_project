@@ -25,6 +25,7 @@ ClarifyBench almost never tests this: only 12 of 1,393 follow-up messages change
 | + Ledger + Domino | 83.3% | 16.7% | 0.0% | 2.90 |
 | Always confirm | 100.0% | 0.0% | 0.0% | 3.73 |
 | **Ours (full)** | **100.0%** | **0.0%** | **0.0%** | **3.40** |
+
 ![Results](fig1_correct.png)
 
 On the 54 normal conversations (no change of mind), every version gets 100%, so the extension does not hurt.
