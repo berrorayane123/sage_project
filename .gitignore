@@ -1,0 +1,5 @@
+# ClarifyBench is downloaded separately (see README): git clone https://github.com/MananSuri27/ClarifyBench.git
+ClarifyBench/
+__pycache__/
+*.pyc
+.env

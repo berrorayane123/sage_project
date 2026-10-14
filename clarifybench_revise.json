@@ -1,0 +1,5283 @@
+[
+ {
+  "id": "000-explicit",
+  "task": 0,
+  "kind": "explicit",
+  "source": "A/02956f7a.json",
+  "user_query": "I need you to verify my travel documents before I embark on this journey. Confirm if my personal details match the required criteria. Once all checks are done, I'll proceed. Here's my personal info",
+  "turns": [
+   {
+    "travel_from": "ORD",
+    "travel_to": "LAX",
+    "travel_date": "2024-08-10",
+    "travel_class": "economy"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-10",
+   "travel_class": "economy"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "000-normal",
+  "task": 0,
+  "kind": "normal",
+  "source": "A/02956f7a.json",
+  "user_query": "I need you to verify my travel documents before I embark on this journey. Confirm if my personal details match the required criteria. Once all checks are done, I'll proceed. Here's my personal info",
+  "turns": [
+   {
+    "travel_from": "ORD",
+    "travel_to": "LAX"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-10",
+   "travel_class": "economy"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "000-revise_sure",
+  "task": 0,
+  "kind": "revise_sure",
+  "source": "A/02956f7a.json",
+  "user_query": "I need you to verify my travel documents before I embark on this journey. Confirm if my personal details match the required criteria. Once all checks are done, I'll proceed. Here's my personal info",
+  "turns": [
+   {
+    "travel_from": "ORD",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "LAX",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-10",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "000-revise_prefer",
+  "task": 0,
+  "kind": "revise_prefer",
+  "source": "A/02956f7a.json",
+  "user_query": "I need you to verify my travel documents before I embark on this journey. Confirm if my personal details match the required criteria. Once all checks are done, I'll proceed. Here's my personal info",
+  "turns": [
+   {
+    "travel_from": "ORD",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "LAX",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-10",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "000-revise_unsure_new",
+  "task": 0,
+  "kind": "revise_unsure_new",
+  "source": "A/02956f7a.json",
+  "user_query": "I need you to verify my travel documents before I embark on this journey. Confirm if my personal details match the required criteria. Once all checks are done, I'll proceed. Here's my personal info",
+  "turns": [
+   {
+    "travel_from": "ORD",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "LAX",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-10",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "000-revise_unsure_old",
+  "task": 0,
+  "kind": "revise_unsure_old",
+  "source": "A/02956f7a.json",
+  "user_query": "I need you to verify my travel documents before I embark on this journey. Confirm if my personal details match the required criteria. Once all checks are done, I'll proceed. Here's my personal info",
+  "turns": [
+   {
+    "travel_from": "ORD",
+    "travel_to": "LAX"
+   },
+   {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-10",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "000-retract",
+  "task": 0,
+  "kind": "retract",
+  "source": "A/02956f7a.json",
+  "user_query": "I need you to verify my travel documents before I embark on this journey. Confirm if my personal details match the required criteria. Once all checks are done, I'll proceed. Here's my personal info",
+  "turns": [
+   {
+    "travel_from": "ORD",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": null
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-10",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "000-domino",
+  "task": 0,
+  "kind": "domino",
+  "source": "A/02956f7a.json",
+  "user_query": "I need you to verify my travel documents before I embark on this journey. Confirm if my personal details match the required criteria. Once all checks are done, I'll proceed. Here's my personal info",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "ORD",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-10",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "001-explicit",
+  "task": 1,
+  "kind": "explicit",
+  "source": "A/3354470d.json",
+  "user_query": "Okay, so here's the plan: I'll soon be heading to Rivermist and straight after, I want to jet off to New York City in first class on the 1st of December, 2024. Are you able to check the cost for this high-flying adventure?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-01",
+    "travel_class": "first"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-01",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "001-normal",
+  "task": 1,
+  "kind": "normal",
+  "source": "A/3354470d.json",
+  "user_query": "Okay, so here's the plan: I'll soon be heading to Rivermist and straight after, I want to jet off to New York City in first class on the 1st of December, 2024. Are you able to check the cost for this high-flying adventure?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-01",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "001-revise_sure",
+  "task": 1,
+  "kind": "revise_sure",
+  "source": "A/3354470d.json",
+  "user_query": "Okay, so here's the plan: I'll soon be heading to Rivermist and straight after, I want to jet off to New York City in first class on the 1st of December, 2024. Are you able to check the cost for this high-flying adventure?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "first",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-01",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "001-revise_prefer",
+  "task": 1,
+  "kind": "revise_prefer",
+  "source": "A/3354470d.json",
+  "user_query": "Okay, so here's the plan: I'll soon be heading to Rivermist and straight after, I want to jet off to New York City in first class on the 1st of December, 2024. Are you able to check the cost for this high-flying adventure?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "first",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-01",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "001-revise_unsure_new",
+  "task": 1,
+  "kind": "revise_unsure_new",
+  "source": "A/3354470d.json",
+  "user_query": "Okay, so here's the plan: I'll soon be heading to Rivermist and straight after, I want to jet off to New York City in first class on the 1st of December, 2024. Are you able to check the cost for this high-flying adventure?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "first",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-01",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "001-revise_unsure_old",
+  "task": 1,
+  "kind": "revise_unsure_old",
+  "source": "A/3354470d.json",
+  "user_query": "Okay, so here's the plan: I'll soon be heading to Rivermist and straight after, I want to jet off to New York City in first class on the 1st of December, 2024. Are you able to check the cost for this high-flying adventure?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_class": "first"
+   },
+   {
+    "travel_class": "economy",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-01",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "001-retract",
+  "task": 1,
+  "kind": "retract",
+  "source": "A/3354470d.json",
+  "user_query": "Okay, so here's the plan: I'll soon be heading to Rivermist and straight after, I want to jet off to New York City in first class on the 1st of December, 2024. Are you able to check the cost for this high-flying adventure?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": null
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-01",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "001-domino",
+  "task": 1,
+  "kind": "domino",
+  "source": "A/3354470d.json",
+  "user_query": "Okay, so here's the plan: I'll soon be heading to Rivermist and straight after, I want to jet off to New York City in first class on the 1st of December, 2024. Are you able to check the cost for this high-flying adventure?",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-01",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "002-explicit",
+  "task": 2,
+  "kind": "explicit",
+  "source": "A/3a4e1340.json",
+  "user_query": "A complex decision awaits me. I'm planning an upcoming trip with limited resources and reevaluating my options. Is there an available estimate for a business class flight from San Francisco International to Los Angeles next Friday November 10th 2024 for an essential business engagement? Could the system book it for me using the secured credit card id 144756014165 and access token abc123xyz, and exchange the estimated cost from USD to EUR for budgeting purposes?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-11-10",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-10",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "002-normal",
+  "task": 2,
+  "kind": "normal",
+  "source": "A/3a4e1340.json",
+  "user_query": "A complex decision awaits me. I'm planning an upcoming trip with limited resources and reevaluating my options. Is there an available estimate for a business class flight from San Francisco International to Los Angeles next Friday November 10th 2024 for an essential business engagement? Could the system book it for me using the secured credit card id 144756014165 and access token abc123xyz, and exchange the estimated cost from USD to EUR for budgeting purposes?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-10",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "002-revise_sure",
+  "task": 2,
+  "kind": "revise_sure",
+  "source": "A/3a4e1340.json",
+  "user_query": "A complex decision awaits me. I'm planning an upcoming trip with limited resources and reevaluating my options. Is there an available estimate for a business class flight from San Francisco International to Los Angeles next Friday November 10th 2024 for an essential business engagement? Could the system book it for me using the secured credit card id 144756014165 and access token abc123xyz, and exchange the estimated cost from USD to EUR for budgeting purposes?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-11-10",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-10",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "002-revise_prefer",
+  "task": 2,
+  "kind": "revise_prefer",
+  "source": "A/3a4e1340.json",
+  "user_query": "A complex decision awaits me. I'm planning an upcoming trip with limited resources and reevaluating my options. Is there an available estimate for a business class flight from San Francisco International to Los Angeles next Friday November 10th 2024 for an essential business engagement? Could the system book it for me using the secured credit card id 144756014165 and access token abc123xyz, and exchange the estimated cost from USD to EUR for budgeting purposes?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-11-10",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-10",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "002-revise_unsure_new",
+  "task": 2,
+  "kind": "revise_unsure_new",
+  "source": "A/3a4e1340.json",
+  "user_query": "A complex decision awaits me. I'm planning an upcoming trip with limited resources and reevaluating my options. Is there an available estimate for a business class flight from San Francisco International to Los Angeles next Friday November 10th 2024 for an essential business engagement? Could the system book it for me using the secured credit card id 144756014165 and access token abc123xyz, and exchange the estimated cost from USD to EUR for budgeting purposes?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-11-10",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-10",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "002-revise_unsure_old",
+  "task": 2,
+  "kind": "revise_unsure_old",
+  "source": "A/3a4e1340.json",
+  "user_query": "A complex decision awaits me. I'm planning an upcoming trip with limited resources and reevaluating my options. Is there an available estimate for a business class flight from San Francisco International to Los Angeles next Friday November 10th 2024 for an essential business engagement? Could the system book it for me using the secured credit card id 144756014165 and access token abc123xyz, and exchange the estimated cost from USD to EUR for budgeting purposes?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-11-10"
+   },
+   {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-10",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "002-retract",
+  "task": 2,
+  "kind": "retract",
+  "source": "A/3a4e1340.json",
+  "user_query": "A complex decision awaits me. I'm planning an upcoming trip with limited resources and reevaluating my options. Is there an available estimate for a business class flight from San Francisco International to Los Angeles next Friday November 10th 2024 for an essential business engagement? Could the system book it for me using the secured credit card id 144756014165 and access token abc123xyz, and exchange the estimated cost from USD to EUR for budgeting purposes?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": null
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-10",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "002-domino",
+  "task": 2,
+  "kind": "domino",
+  "source": "A/3a4e1340.json",
+  "user_query": "A complex decision awaits me. I'm planning an upcoming trip with limited resources and reevaluating my options. Is there an available estimate for a business class flight from San Francisco International to Los Angeles next Friday November 10th 2024 for an essential business engagement? Could the system book it for me using the secured credit card id 144756014165 and access token abc123xyz, and exchange the estimated cost from USD to EUR for budgeting purposes?",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-10",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "003-explicit",
+  "task": 3,
+  "kind": "explicit",
+  "source": "A/3c439967.json",
+  "user_query": "I'm planning a journey from Los Angeles to New York on the morning of April 15th 2024, preferring to fly business class. Arrange this flight and access token 'abc123xyz'.",
+  "turns": [
+   {
+    "travel_from": "LAX",
+    "travel_to": "JFK",
+    "travel_date": "2024-04-15",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-04-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "003-normal",
+  "task": 3,
+  "kind": "normal",
+  "source": "A/3c439967.json",
+  "user_query": "I'm planning a journey from Los Angeles to New York on the morning of April 15th 2024, preferring to fly business class. Arrange this flight and access token 'abc123xyz'.",
+  "turns": [
+   {
+    "travel_from": "LAX",
+    "travel_to": "JFK"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-04-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "003-revise_sure",
+  "task": 3,
+  "kind": "revise_sure",
+  "source": "A/3c439967.json",
+  "user_query": "I'm planning a journey from Los Angeles to New York on the morning of April 15th 2024, preferring to fly business class. Arrange this flight and access token 'abc123xyz'.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "JFK"
+   },
+   {
+    "travel_from": "LAX",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-04-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "CRH"
+ },
+ {
+  "id": "003-revise_prefer",
+  "task": 3,
+  "kind": "revise_prefer",
+  "source": "A/3c439967.json",
+  "user_query": "I'm planning a journey from Los Angeles to New York on the morning of April 15th 2024, preferring to fly business class. Arrange this flight and access token 'abc123xyz'.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "JFK"
+   },
+   {
+    "travel_from": "LAX",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-04-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "CRH"
+ },
+ {
+  "id": "003-revise_unsure_new",
+  "task": 3,
+  "kind": "revise_unsure_new",
+  "source": "A/3c439967.json",
+  "user_query": "I'm planning a journey from Los Angeles to New York on the morning of April 15th 2024, preferring to fly business class. Arrange this flight and access token 'abc123xyz'.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "JFK"
+   },
+   {
+    "travel_from": "LAX",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-04-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "CRH"
+ },
+ {
+  "id": "003-revise_unsure_old",
+  "task": 3,
+  "kind": "revise_unsure_old",
+  "source": "A/3c439967.json",
+  "user_query": "I'm planning a journey from Los Angeles to New York on the morning of April 15th 2024, preferring to fly business class. Arrange this flight and access token 'abc123xyz'.",
+  "turns": [
+   {
+    "travel_from": "LAX",
+    "travel_to": "JFK"
+   },
+   {
+    "travel_from": "CRH",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-04-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "CRH"
+ },
+ {
+  "id": "003-retract",
+  "task": 3,
+  "kind": "retract",
+  "source": "A/3c439967.json",
+  "user_query": "I'm planning a journey from Los Angeles to New York on the morning of April 15th 2024, preferring to fly business class. Arrange this flight and access token 'abc123xyz'.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "JFK"
+   },
+   {
+    "travel_from": null
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-04-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "CRH"
+ },
+ {
+  "id": "003-domino",
+  "task": 3,
+  "kind": "domino",
+  "source": "A/3c439967.json",
+  "user_query": "I'm planning a journey from Los Angeles to New York on the morning of April 15th 2024, preferring to fly business class. Arrange this flight and access token 'abc123xyz'.",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "LAX",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-04-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "004-explicit",
+  "task": 4,
+  "kind": "explicit",
+  "source": "A/524c81ac.json",
+  "user_query": "I'm setting sail on an adventure from Crescent Hollow to Rivermist and need the scoop on flight costs for my journey. My takeoff is scheduled for 2022-07-15, and luxury's the name of the game, so I'll be in business class.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "RMS",
+    "travel_date": "2022-07-15",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "RMS",
+   "travel_date": "2022-07-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "004-normal",
+  "task": 4,
+  "kind": "normal",
+  "source": "A/524c81ac.json",
+  "user_query": "I'm setting sail on an adventure from Crescent Hollow to Rivermist and need the scoop on flight costs for my journey. My takeoff is scheduled for 2022-07-15, and luxury's the name of the game, so I'll be in business class.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "RMS"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "RMS",
+   "travel_date": "2022-07-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "004-revise_sure",
+  "task": 4,
+  "kind": "revise_sure",
+  "source": "A/524c81ac.json",
+  "user_query": "I'm setting sail on an adventure from Crescent Hollow to Rivermist and need the scoop on flight costs for my journey. My takeoff is scheduled for 2022-07-15, and luxury's the name of the game, so I'll be in business class.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "RMS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "RMS",
+   "travel_date": "2022-07-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "004-revise_prefer",
+  "task": 4,
+  "kind": "revise_prefer",
+  "source": "A/524c81ac.json",
+  "user_query": "I'm setting sail on an adventure from Crescent Hollow to Rivermist and need the scoop on flight costs for my journey. My takeoff is scheduled for 2022-07-15, and luxury's the name of the game, so I'll be in business class.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "RMS",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "RMS",
+   "travel_date": "2022-07-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "004-revise_unsure_new",
+  "task": 4,
+  "kind": "revise_unsure_new",
+  "source": "A/524c81ac.json",
+  "user_query": "I'm setting sail on an adventure from Crescent Hollow to Rivermist and need the scoop on flight costs for my journey. My takeoff is scheduled for 2022-07-15, and luxury's the name of the game, so I'll be in business class.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "RMS",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "RMS",
+   "travel_date": "2022-07-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "004-revise_unsure_old",
+  "task": 4,
+  "kind": "revise_unsure_old",
+  "source": "A/524c81ac.json",
+  "user_query": "I'm setting sail on an adventure from Crescent Hollow to Rivermist and need the scoop on flight costs for my journey. My takeoff is scheduled for 2022-07-15, and luxury's the name of the game, so I'll be in business class.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "RMS"
+   },
+   {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "RMS",
+   "travel_date": "2022-07-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "004-retract",
+  "task": 4,
+  "kind": "retract",
+  "source": "A/524c81ac.json",
+  "user_query": "I'm setting sail on an adventure from Crescent Hollow to Rivermist and need the scoop on flight costs for my journey. My takeoff is scheduled for 2022-07-15, and luxury's the name of the game, so I'll be in business class.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": null
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "RMS",
+   "travel_date": "2022-07-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "004-domino",
+  "task": 4,
+  "kind": "domino",
+  "source": "A/524c81ac.json",
+  "user_query": "I'm setting sail on an adventure from Crescent Hollow to Rivermist and need the scoop on flight costs for my journey. My takeoff is scheduled for 2022-07-15, and luxury's the name of the game, so I'll be in business class.",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "BOS"
+   },
+   {
+    "travel_from": "CRH",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "RMS",
+   "travel_date": "2022-07-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "BOS"
+ },
+ {
+  "id": "005-explicit",
+  "task": 5,
+  "kind": "explicit",
+  "source": "A/57d30c97.json",
+  "user_query": "I just graduated and plan on traveling for alumni meetups. I'm really curious which airports are around cities?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_date": "2024-08-15",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "005-normal",
+  "task": 5,
+  "kind": "normal",
+  "source": "A/57d30c97.json",
+  "user_query": "I just graduated and plan on traveling for alumni meetups. I'm really curious which airports are around cities?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "005-revise_sure",
+  "task": 5,
+  "kind": "revise_sure",
+  "source": "A/57d30c97.json",
+  "user_query": "I just graduated and plan on traveling for alumni meetups. I'm really curious which airports are around cities?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "business",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "005-revise_prefer",
+  "task": 5,
+  "kind": "revise_prefer",
+  "source": "A/57d30c97.json",
+  "user_query": "I just graduated and plan on traveling for alumni meetups. I'm really curious which airports are around cities?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "business",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "005-revise_unsure_new",
+  "task": 5,
+  "kind": "revise_unsure_new",
+  "source": "A/57d30c97.json",
+  "user_query": "I just graduated and plan on traveling for alumni meetups. I'm really curious which airports are around cities?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "business",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "005-revise_unsure_old",
+  "task": 5,
+  "kind": "revise_unsure_old",
+  "source": "A/57d30c97.json",
+  "user_query": "I just graduated and plan on traveling for alumni meetups. I'm really curious which airports are around cities?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_class": "business"
+   },
+   {
+    "travel_class": "economy",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "005-retract",
+  "task": 5,
+  "kind": "retract",
+  "source": "A/57d30c97.json",
+  "user_query": "I just graduated and plan on traveling for alumni meetups. I'm really curious which airports are around cities?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": null
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "005-domino",
+  "task": 5,
+  "kind": "domino",
+  "source": "A/57d30c97.json",
+  "user_query": "I just graduated and plan on traveling for alumni meetups. I'm really curious which airports are around cities?",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-08-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "006-explicit",
+  "task": 6,
+  "kind": "explicit",
+  "source": "A/585524ad.json",
+  "user_query": "Hey there! Since I'm currently residing in Rivermist but planning a grand getaway to Los Angeles, I'm curious about the price of a business class flight for December 15th, 2024. What's the current rate you can find?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-15",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "006-normal",
+  "task": 6,
+  "kind": "normal",
+  "source": "A/585524ad.json",
+  "user_query": "Hey there! Since I'm currently residing in Rivermist but planning a grand getaway to Los Angeles, I'm curious about the price of a business class flight for December 15th, 2024. What's the current rate you can find?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "006-revise_sure",
+  "task": 6,
+  "kind": "revise_sure",
+  "source": "A/585524ad.json",
+  "user_query": "Hey there! Since I'm currently residing in Rivermist but planning a grand getaway to Los Angeles, I'm curious about the price of a business class flight for December 15th, 2024. What's the current rate you can find?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-12-15",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "006-revise_prefer",
+  "task": 6,
+  "kind": "revise_prefer",
+  "source": "A/585524ad.json",
+  "user_query": "Hey there! Since I'm currently residing in Rivermist but planning a grand getaway to Los Angeles, I'm curious about the price of a business class flight for December 15th, 2024. What's the current rate you can find?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-12-15",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "006-revise_unsure_new",
+  "task": 6,
+  "kind": "revise_unsure_new",
+  "source": "A/585524ad.json",
+  "user_query": "Hey there! Since I'm currently residing in Rivermist but planning a grand getaway to Los Angeles, I'm curious about the price of a business class flight for December 15th, 2024. What's the current rate you can find?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-12-15",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "006-revise_unsure_old",
+  "task": 6,
+  "kind": "revise_unsure_old",
+  "source": "A/585524ad.json",
+  "user_query": "Hey there! Since I'm currently residing in Rivermist but planning a grand getaway to Los Angeles, I'm curious about the price of a business class flight for December 15th, 2024. What's the current rate you can find?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-15"
+   },
+   {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "006-retract",
+  "task": 6,
+  "kind": "retract",
+  "source": "A/585524ad.json",
+  "user_query": "Hey there! Since I'm currently residing in Rivermist but planning a grand getaway to Los Angeles, I'm curious about the price of a business class flight for December 15th, 2024. What's the current rate you can find?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": null
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "006-domino",
+  "task": 6,
+  "kind": "domino",
+  "source": "A/585524ad.json",
+  "user_query": "Hey there! Since I'm currently residing in Rivermist but planning a grand getaway to Los Angeles, I'm curious about the price of a business class flight for December 15th, 2024. What's the current rate you can find?",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "007-explicit",
+  "task": 7,
+  "kind": "explicit",
+  "source": "A/7cbc2582.json",
+  "user_query": "Before I start packing my bags for the upcoming trip, I need to double-check that all my personal information is up to date. Let's go over my full name and passport details to make sure everything's in order before I hit the road. For reference my birthdate is January 1st 1950 and the number on my passport is P followed by 12345678. My first name is Michael and  last name is Thompson",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "GFD",
+    "travel_date": "2024-12-15",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "GFD",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "007-normal",
+  "task": 7,
+  "kind": "normal",
+  "source": "A/7cbc2582.json",
+  "user_query": "Before I start packing my bags for the upcoming trip, I need to double-check that all my personal information is up to date. Let's go over my full name and passport details to make sure everything's in order before I hit the road. For reference my birthdate is January 1st 1950 and the number on my passport is P followed by 12345678. My first name is Michael and  last name is Thompson",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "GFD"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "GFD",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "007-revise_sure",
+  "task": 7,
+  "kind": "revise_sure",
+  "source": "A/7cbc2582.json",
+  "user_query": "Before I start packing my bags for the upcoming trip, I need to double-check that all my personal information is up to date. Let's go over my full name and passport details to make sure everything's in order before I hit the road. For reference my birthdate is January 1st 1950 and the number on my passport is P followed by 12345678. My first name is Michael and  last name is Thompson",
+  "turns": [
+   {
+    "travel_from": "ATV",
+    "travel_to": "GFD"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "GFD",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "ATV"
+ },
+ {
+  "id": "007-revise_prefer",
+  "task": 7,
+  "kind": "revise_prefer",
+  "source": "A/7cbc2582.json",
+  "user_query": "Before I start packing my bags for the upcoming trip, I need to double-check that all my personal information is up to date. Let's go over my full name and passport details to make sure everything's in order before I hit the road. For reference my birthdate is January 1st 1950 and the number on my passport is P followed by 12345678. My first name is Michael and  last name is Thompson",
+  "turns": [
+   {
+    "travel_from": "ATV",
+    "travel_to": "GFD"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "GFD",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "ATV"
+ },
+ {
+  "id": "007-revise_unsure_new",
+  "task": 7,
+  "kind": "revise_unsure_new",
+  "source": "A/7cbc2582.json",
+  "user_query": "Before I start packing my bags for the upcoming trip, I need to double-check that all my personal information is up to date. Let's go over my full name and passport details to make sure everything's in order before I hit the road. For reference my birthdate is January 1st 1950 and the number on my passport is P followed by 12345678. My first name is Michael and  last name is Thompson",
+  "turns": [
+   {
+    "travel_from": "ATV",
+    "travel_to": "GFD"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "GFD",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "ATV"
+ },
+ {
+  "id": "007-revise_unsure_old",
+  "task": 7,
+  "kind": "revise_unsure_old",
+  "source": "A/7cbc2582.json",
+  "user_query": "Before I start packing my bags for the upcoming trip, I need to double-check that all my personal information is up to date. Let's go over my full name and passport details to make sure everything's in order before I hit the road. For reference my birthdate is January 1st 1950 and the number on my passport is P followed by 12345678. My first name is Michael and  last name is Thompson",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "GFD"
+   },
+   {
+    "travel_from": "ATV",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "GFD",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "ATV"
+ },
+ {
+  "id": "007-retract",
+  "task": 7,
+  "kind": "retract",
+  "source": "A/7cbc2582.json",
+  "user_query": "Before I start packing my bags for the upcoming trip, I need to double-check that all my personal information is up to date. Let's go over my full name and passport details to make sure everything's in order before I hit the road. For reference my birthdate is January 1st 1950 and the number on my passport is P followed by 12345678. My first name is Michael and  last name is Thompson",
+  "turns": [
+   {
+    "travel_from": "ATV",
+    "travel_to": "GFD"
+   },
+   {
+    "travel_from": null
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "GFD",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "ATV"
+ },
+ {
+  "id": "007-domino",
+  "task": 7,
+  "kind": "domino",
+  "source": "A/7cbc2582.json",
+  "user_query": "Before I start packing my bags for the upcoming trip, I need to double-check that all my personal information is up to date. Let's go over my full name and passport details to make sure everything's in order before I hit the road. For reference my birthdate is January 1st 1950 and the number on my passport is P followed by 12345678. My first name is Michael and  last name is Thompson",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "GFD",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "008-explicit",
+  "task": 8,
+  "kind": "explicit",
+  "source": "A/8a485c2c.json",
+  "user_query": "I have to arrange a flight from San Francisco to Los Angeles for my journey next month November on two days after close of the 14th day in the year 2024. I'll be flying business class, and I'll be settling the payment using my American Express card with id 'AMEX123456789'. Would you be able to take care of this reservation using access token 'abc123xyz' for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-11-16",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-16",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "008-normal",
+  "task": 8,
+  "kind": "normal",
+  "source": "A/8a485c2c.json",
+  "user_query": "I have to arrange a flight from San Francisco to Los Angeles for my journey next month November on two days after close of the 14th day in the year 2024. I'll be flying business class, and I'll be settling the payment using my American Express card with id 'AMEX123456789'. Would you be able to take care of this reservation using access token 'abc123xyz' for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-16",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "008-revise_sure",
+  "task": 8,
+  "kind": "revise_sure",
+  "source": "A/8a485c2c.json",
+  "user_query": "I have to arrange a flight from San Francisco to Los Angeles for my journey next month November on two days after close of the 14th day in the year 2024. I'll be flying business class, and I'll be settling the payment using my American Express card with id 'AMEX123456789'. Would you be able to take care of this reservation using access token 'abc123xyz' for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "LAX",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-16",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "008-revise_prefer",
+  "task": 8,
+  "kind": "revise_prefer",
+  "source": "A/8a485c2c.json",
+  "user_query": "I have to arrange a flight from San Francisco to Los Angeles for my journey next month November on two days after close of the 14th day in the year 2024. I'll be flying business class, and I'll be settling the payment using my American Express card with id 'AMEX123456789'. Would you be able to take care of this reservation using access token 'abc123xyz' for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "LAX",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-16",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "008-revise_unsure_new",
+  "task": 8,
+  "kind": "revise_unsure_new",
+  "source": "A/8a485c2c.json",
+  "user_query": "I have to arrange a flight from San Francisco to Los Angeles for my journey next month November on two days after close of the 14th day in the year 2024. I'll be flying business class, and I'll be settling the payment using my American Express card with id 'AMEX123456789'. Would you be able to take care of this reservation using access token 'abc123xyz' for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "LAX",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-16",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "008-revise_unsure_old",
+  "task": 8,
+  "kind": "revise_unsure_old",
+  "source": "A/8a485c2c.json",
+  "user_query": "I have to arrange a flight from San Francisco to Los Angeles for my journey next month November on two days after close of the 14th day in the year 2024. I'll be flying business class, and I'll be settling the payment using my American Express card with id 'AMEX123456789'. Would you be able to take care of this reservation using access token 'abc123xyz' for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX"
+   },
+   {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-16",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "008-retract",
+  "task": 8,
+  "kind": "retract",
+  "source": "A/8a485c2c.json",
+  "user_query": "I have to arrange a flight from San Francisco to Los Angeles for my journey next month November on two days after close of the 14th day in the year 2024. I'll be flying business class, and I'll be settling the payment using my American Express card with id 'AMEX123456789'. Would you be able to take care of this reservation using access token 'abc123xyz' for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": null
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-16",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "008-domino",
+  "task": 8,
+  "kind": "domino",
+  "source": "A/8a485c2c.json",
+  "user_query": "I have to arrange a flight from San Francisco to Los Angeles for my journey next month November on two days after close of the 14th day in the year 2024. I'll be flying business class, and I'll be settling the payment using my American Express card with id 'AMEX123456789'. Would you be able to take care of this reservation using access token 'abc123xyz' for me?",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-16",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "009-explicit",
+  "task": 9,
+  "kind": "explicit",
+  "source": "A/9ca4f096.json",
+  "user_query": "I'm in the process of scheduling a journey from San Francisco to Chicago on the 15th of the year 2024's eleventh month. It's important the travel is in first class. I'll be settling the fare with my credit card with id 144756014165 and access token 'secureAccessToken12345', and would like my personal details integrated into the reservation. I've secured my confidential access token for authentication, which will be used during this booking.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "ORD",
+    "travel_date": "2024-11-15",
+    "travel_class": "first"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "ORD",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "009-normal",
+  "task": 9,
+  "kind": "normal",
+  "source": "A/9ca4f096.json",
+  "user_query": "I'm in the process of scheduling a journey from San Francisco to Chicago on the 15th of the year 2024's eleventh month. It's important the travel is in first class. I'll be settling the fare with my credit card with id 144756014165 and access token 'secureAccessToken12345', and would like my personal details integrated into the reservation. I've secured my confidential access token for authentication, which will be used during this booking.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "ORD"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "ORD",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "009-revise_sure",
+  "task": 9,
+  "kind": "revise_sure",
+  "source": "A/9ca4f096.json",
+  "user_query": "I'm in the process of scheduling a journey from San Francisco to Chicago on the 15th of the year 2024's eleventh month. It's important the travel is in first class. I'll be settling the fare with my credit card with id 144756014165 and access token 'secureAccessToken12345', and would like my personal details integrated into the reservation. I've secured my confidential access token for authentication, which will be used during this booking.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "ORD",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "first",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "ORD",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "009-revise_prefer",
+  "task": 9,
+  "kind": "revise_prefer",
+  "source": "A/9ca4f096.json",
+  "user_query": "I'm in the process of scheduling a journey from San Francisco to Chicago on the 15th of the year 2024's eleventh month. It's important the travel is in first class. I'll be settling the fare with my credit card with id 144756014165 and access token 'secureAccessToken12345', and would like my personal details integrated into the reservation. I've secured my confidential access token for authentication, which will be used during this booking.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "ORD",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "first",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "ORD",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "009-revise_unsure_new",
+  "task": 9,
+  "kind": "revise_unsure_new",
+  "source": "A/9ca4f096.json",
+  "user_query": "I'm in the process of scheduling a journey from San Francisco to Chicago on the 15th of the year 2024's eleventh month. It's important the travel is in first class. I'll be settling the fare with my credit card with id 144756014165 and access token 'secureAccessToken12345', and would like my personal details integrated into the reservation. I've secured my confidential access token for authentication, which will be used during this booking.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "ORD",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "first",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "ORD",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "009-revise_unsure_old",
+  "task": 9,
+  "kind": "revise_unsure_old",
+  "source": "A/9ca4f096.json",
+  "user_query": "I'm in the process of scheduling a journey from San Francisco to Chicago on the 15th of the year 2024's eleventh month. It's important the travel is in first class. I'll be settling the fare with my credit card with id 144756014165 and access token 'secureAccessToken12345', and would like my personal details integrated into the reservation. I've secured my confidential access token for authentication, which will be used during this booking.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "ORD",
+    "travel_class": "first"
+   },
+   {
+    "travel_class": "economy",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "ORD",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "009-retract",
+  "task": 9,
+  "kind": "retract",
+  "source": "A/9ca4f096.json",
+  "user_query": "I'm in the process of scheduling a journey from San Francisco to Chicago on the 15th of the year 2024's eleventh month. It's important the travel is in first class. I'll be settling the fare with my credit card with id 144756014165 and access token 'secureAccessToken12345', and would like my personal details integrated into the reservation. I've secured my confidential access token for authentication, which will be used during this booking.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "ORD",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": null
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "ORD",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "009-domino",
+  "task": 9,
+  "kind": "domino",
+  "source": "A/9ca4f096.json",
+  "user_query": "I'm in the process of scheduling a journey from San Francisco to Chicago on the 15th of the year 2024's eleventh month. It's important the travel is in first class. I'll be settling the fare with my credit card with id 144756014165 and access token 'secureAccessToken12345', and would like my personal details integrated into the reservation. I've secured my confidential access token for authentication, which will be used during this booking.",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "ORD",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "010-explicit",
+  "task": 10,
+  "kind": "explicit",
+  "source": "A/a1a290c0.json",
+  "user_query": "List all international airports currently accessible for travel.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "PHV",
+    "travel_date": "2024-03-03",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "PHV",
+   "travel_date": "2024-03-03",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "010-normal",
+  "task": 10,
+  "kind": "normal",
+  "source": "A/a1a290c0.json",
+  "user_query": "List all international airports currently accessible for travel.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "PHV"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "PHV",
+   "travel_date": "2024-03-03",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "010-revise_sure",
+  "task": 10,
+  "kind": "revise_sure",
+  "source": "A/a1a290c0.json",
+  "user_query": "List all international airports currently accessible for travel.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "PHV",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-03-03",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "PHV",
+   "travel_date": "2024-03-03",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "010-revise_prefer",
+  "task": 10,
+  "kind": "revise_prefer",
+  "source": "A/a1a290c0.json",
+  "user_query": "List all international airports currently accessible for travel.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "PHV",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-03-03",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "PHV",
+   "travel_date": "2024-03-03",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "010-revise_unsure_new",
+  "task": 10,
+  "kind": "revise_unsure_new",
+  "source": "A/a1a290c0.json",
+  "user_query": "List all international airports currently accessible for travel.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "PHV",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-03-03",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "PHV",
+   "travel_date": "2024-03-03",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "010-revise_unsure_old",
+  "task": 10,
+  "kind": "revise_unsure_old",
+  "source": "A/a1a290c0.json",
+  "user_query": "List all international airports currently accessible for travel.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "PHV",
+    "travel_date": "2024-03-03"
+   },
+   {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "PHV",
+   "travel_date": "2024-03-03",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "010-retract",
+  "task": 10,
+  "kind": "retract",
+  "source": "A/a1a290c0.json",
+  "user_query": "List all international airports currently accessible for travel.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "PHV",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": null
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "PHV",
+   "travel_date": "2024-03-03",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "010-domino",
+  "task": 10,
+  "kind": "domino",
+  "source": "A/a1a290c0.json",
+  "user_query": "List all international airports currently accessible for travel.",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "BOS"
+   },
+   {
+    "travel_from": "CRH",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "CRH",
+   "travel_to": "PHV",
+   "travel_date": "2024-03-03",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "BOS"
+ },
+ {
+  "id": "011-explicit",
+  "task": 11,
+  "kind": "explicit",
+  "source": "A/bed9faa8.json",
+  "user_query": "As I'm in the process of planning an upcoming journey, I have specific departure and arrival cities in mind. Could you assist in estimating the airfare between ORD and SVP from the comprehensive list available through the system? Please note, I am considering traveling next weekend July 14th, 2024 with a preference for a business class seat.",
+  "turns": [
+   {
+    "travel_from": "ORD",
+    "travel_to": "SVP",
+    "travel_date": "2024-07-14",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "SVP",
+   "travel_date": "2024-07-14",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "011-normal",
+  "task": 11,
+  "kind": "normal",
+  "source": "A/bed9faa8.json",
+  "user_query": "As I'm in the process of planning an upcoming journey, I have specific departure and arrival cities in mind. Could you assist in estimating the airfare between ORD and SVP from the comprehensive list available through the system? Please note, I am considering traveling next weekend July 14th, 2024 with a preference for a business class seat.",
+  "turns": [
+   {
+    "travel_from": "ORD",
+    "travel_to": "SVP"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "SVP",
+   "travel_date": "2024-07-14",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "011-revise_sure",
+  "task": 11,
+  "kind": "revise_sure",
+  "source": "A/bed9faa8.json",
+  "user_query": "As I'm in the process of planning an upcoming journey, I have specific departure and arrival cities in mind. Could you assist in estimating the airfare between ORD and SVP from the comprehensive list available through the system? Please note, I am considering traveling next weekend July 14th, 2024 with a preference for a business class seat.",
+  "turns": [
+   {
+    "travel_from": "BOS",
+    "travel_to": "SVP"
+   },
+   {
+    "travel_from": "ORD",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "SVP",
+   "travel_date": "2024-07-14",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "BOS"
+ },
+ {
+  "id": "011-revise_prefer",
+  "task": 11,
+  "kind": "revise_prefer",
+  "source": "A/bed9faa8.json",
+  "user_query": "As I'm in the process of planning an upcoming journey, I have specific departure and arrival cities in mind. Could you assist in estimating the airfare between ORD and SVP from the comprehensive list available through the system? Please note, I am considering traveling next weekend July 14th, 2024 with a preference for a business class seat.",
+  "turns": [
+   {
+    "travel_from": "BOS",
+    "travel_to": "SVP"
+   },
+   {
+    "travel_from": "ORD",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "SVP",
+   "travel_date": "2024-07-14",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "BOS"
+ },
+ {
+  "id": "011-revise_unsure_new",
+  "task": 11,
+  "kind": "revise_unsure_new",
+  "source": "A/bed9faa8.json",
+  "user_query": "As I'm in the process of planning an upcoming journey, I have specific departure and arrival cities in mind. Could you assist in estimating the airfare between ORD and SVP from the comprehensive list available through the system? Please note, I am considering traveling next weekend July 14th, 2024 with a preference for a business class seat.",
+  "turns": [
+   {
+    "travel_from": "BOS",
+    "travel_to": "SVP"
+   },
+   {
+    "travel_from": "ORD",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "SVP",
+   "travel_date": "2024-07-14",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "BOS"
+ },
+ {
+  "id": "011-revise_unsure_old",
+  "task": 11,
+  "kind": "revise_unsure_old",
+  "source": "A/bed9faa8.json",
+  "user_query": "As I'm in the process of planning an upcoming journey, I have specific departure and arrival cities in mind. Could you assist in estimating the airfare between ORD and SVP from the comprehensive list available through the system? Please note, I am considering traveling next weekend July 14th, 2024 with a preference for a business class seat.",
+  "turns": [
+   {
+    "travel_from": "ORD",
+    "travel_to": "SVP"
+   },
+   {
+    "travel_from": "BOS",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "SVP",
+   "travel_date": "2024-07-14",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "BOS"
+ },
+ {
+  "id": "011-retract",
+  "task": 11,
+  "kind": "retract",
+  "source": "A/bed9faa8.json",
+  "user_query": "As I'm in the process of planning an upcoming journey, I have specific departure and arrival cities in mind. Could you assist in estimating the airfare between ORD and SVP from the comprehensive list available through the system? Please note, I am considering traveling next weekend July 14th, 2024 with a preference for a business class seat.",
+  "turns": [
+   {
+    "travel_from": "BOS",
+    "travel_to": "SVP"
+   },
+   {
+    "travel_from": null
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "SVP",
+   "travel_date": "2024-07-14",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "BOS"
+ },
+ {
+  "id": "011-domino",
+  "task": 11,
+  "kind": "domino",
+  "source": "A/bed9faa8.json",
+  "user_query": "As I'm in the process of planning an upcoming journey, I have specific departure and arrival cities in mind. Could you assist in estimating the airfare between ORD and SVP from the comprehensive list available through the system? Please note, I am considering traveling next weekend July 14th, 2024 with a preference for a business class seat.",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "ORD",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "ORD",
+   "travel_to": "SVP",
+   "travel_date": "2024-07-14",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "012-explicit",
+  "task": 12,
+  "kind": "explicit",
+  "source": "A/c088ce0a.json",
+  "user_query": "I need to schedule a flight soon on booking id 1234 and want to examine different alternatives. Calculate the cost of a business class ticket for the first airport on the available list to the last airport on the same list, on the last day of October 2024. Provide the estimated total payable amount for me.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "BOS",
+    "travel_date": "2024-10-31",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "BOS",
+   "travel_date": "2024-10-31",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "012-normal",
+  "task": 12,
+  "kind": "normal",
+  "source": "A/c088ce0a.json",
+  "user_query": "I need to schedule a flight soon on booking id 1234 and want to examine different alternatives. Calculate the cost of a business class ticket for the first airport on the available list to the last airport on the same list, on the last day of October 2024. Provide the estimated total payable amount for me.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "BOS"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "BOS",
+   "travel_date": "2024-10-31",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "012-revise_sure",
+  "task": 12,
+  "kind": "revise_sure",
+  "source": "A/c088ce0a.json",
+  "user_query": "I need to schedule a flight soon on booking id 1234 and want to examine different alternatives. Calculate the cost of a business class ticket for the first airport on the available list to the last airport on the same list, on the last day of October 2024. Provide the estimated total payable amount for me.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "BOS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "BOS",
+   "travel_date": "2024-10-31",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "012-revise_prefer",
+  "task": 12,
+  "kind": "revise_prefer",
+  "source": "A/c088ce0a.json",
+  "user_query": "I need to schedule a flight soon on booking id 1234 and want to examine different alternatives. Calculate the cost of a business class ticket for the first airport on the available list to the last airport on the same list, on the last day of October 2024. Provide the estimated total payable amount for me.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "BOS",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "BOS",
+   "travel_date": "2024-10-31",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "012-revise_unsure_new",
+  "task": 12,
+  "kind": "revise_unsure_new",
+  "source": "A/c088ce0a.json",
+  "user_query": "I need to schedule a flight soon on booking id 1234 and want to examine different alternatives. Calculate the cost of a business class ticket for the first airport on the available list to the last airport on the same list, on the last day of October 2024. Provide the estimated total payable amount for me.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "BOS",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "BOS",
+   "travel_date": "2024-10-31",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "012-revise_unsure_old",
+  "task": 12,
+  "kind": "revise_unsure_old",
+  "source": "A/c088ce0a.json",
+  "user_query": "I need to schedule a flight soon on booking id 1234 and want to examine different alternatives. Calculate the cost of a business class ticket for the first airport on the available list to the last airport on the same list, on the last day of October 2024. Provide the estimated total payable amount for me.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "BOS"
+   },
+   {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "BOS",
+   "travel_date": "2024-10-31",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "012-retract",
+  "task": 12,
+  "kind": "retract",
+  "source": "A/c088ce0a.json",
+  "user_query": "I need to schedule a flight soon on booking id 1234 and want to examine different alternatives. Calculate the cost of a business class ticket for the first airport on the available list to the last airport on the same list, on the last day of October 2024. Provide the estimated total payable amount for me.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": null
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "BOS",
+   "travel_date": "2024-10-31",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "012-domino",
+  "task": 12,
+  "kind": "domino",
+  "source": "A/c088ce0a.json",
+  "user_query": "I need to schedule a flight soon on booking id 1234 and want to examine different alternatives. Calculate the cost of a business class ticket for the first airport on the available list to the last airport on the same list, on the last day of October 2024. Provide the estimated total payable amount for me.",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "BOS",
+   "travel_date": "2024-10-31",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "013-explicit",
+  "task": 13,
+  "kind": "explicit",
+  "source": "A/ccc5529c.json",
+  "user_query": "I'm planning to jet off and stumbled upon a nifty flight from San Francisco to Los Angeles. Since my budget isn't too tight, why don't you go ahead and snag that booking for me? ",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-11-15",
+    "travel_class": "first"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "013-normal",
+  "task": 13,
+  "kind": "normal",
+  "source": "A/ccc5529c.json",
+  "user_query": "I'm planning to jet off and stumbled upon a nifty flight from San Francisco to Los Angeles. Since my budget isn't too tight, why don't you go ahead and snag that booking for me? ",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "013-revise_sure",
+  "task": 13,
+  "kind": "revise_sure",
+  "source": "A/ccc5529c.json",
+  "user_query": "I'm planning to jet off and stumbled upon a nifty flight from San Francisco to Los Angeles. Since my budget isn't too tight, why don't you go ahead and snag that booking for me? ",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "first",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "013-revise_prefer",
+  "task": 13,
+  "kind": "revise_prefer",
+  "source": "A/ccc5529c.json",
+  "user_query": "I'm planning to jet off and stumbled upon a nifty flight from San Francisco to Los Angeles. Since my budget isn't too tight, why don't you go ahead and snag that booking for me? ",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "first",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "013-revise_unsure_new",
+  "task": 13,
+  "kind": "revise_unsure_new",
+  "source": "A/ccc5529c.json",
+  "user_query": "I'm planning to jet off and stumbled upon a nifty flight from San Francisco to Los Angeles. Since my budget isn't too tight, why don't you go ahead and snag that booking for me? ",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "first",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "013-revise_unsure_old",
+  "task": 13,
+  "kind": "revise_unsure_old",
+  "source": "A/ccc5529c.json",
+  "user_query": "I'm planning to jet off and stumbled upon a nifty flight from San Francisco to Los Angeles. Since my budget isn't too tight, why don't you go ahead and snag that booking for me? ",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_class": "first"
+   },
+   {
+    "travel_class": "economy",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "013-retract",
+  "task": 13,
+  "kind": "retract",
+  "source": "A/ccc5529c.json",
+  "user_query": "I'm planning to jet off and stumbled upon a nifty flight from San Francisco to Los Angeles. Since my budget isn't too tight, why don't you go ahead and snag that booking for me? ",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": null
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "013-domino",
+  "task": 13,
+  "kind": "domino",
+  "source": "A/ccc5529c.json",
+  "user_query": "I'm planning to jet off and stumbled upon a nifty flight from San Francisco to Los Angeles. Since my budget isn't too tight, why don't you go ahead and snag that booking for me? ",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "014-explicit",
+  "task": 14,
+  "kind": "explicit",
+  "source": "A/ce4eb78e.json",
+  "user_query": "I'm considering flying from Los Angeles Internationa (LAX) to John F. Kennedy (JFK) in business class on November 15, 2024",
+  "turns": [
+   {
+    "travel_from": "LAX",
+    "travel_to": "JFK",
+    "travel_date": "2024-11-15",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-11-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "014-normal",
+  "task": 14,
+  "kind": "normal",
+  "source": "A/ce4eb78e.json",
+  "user_query": "I'm considering flying from Los Angeles Internationa (LAX) to John F. Kennedy (JFK) in business class on November 15, 2024",
+  "turns": [
+   {
+    "travel_from": "LAX",
+    "travel_to": "JFK"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-11-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "014-revise_sure",
+  "task": 14,
+  "kind": "revise_sure",
+  "source": "A/ce4eb78e.json",
+  "user_query": "I'm considering flying from Los Angeles Internationa (LAX) to John F. Kennedy (JFK) in business class on November 15, 2024",
+  "turns": [
+   {
+    "travel_from": "LAX",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-11-15",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-11-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "014-revise_prefer",
+  "task": 14,
+  "kind": "revise_prefer",
+  "source": "A/ce4eb78e.json",
+  "user_query": "I'm considering flying from Los Angeles Internationa (LAX) to John F. Kennedy (JFK) in business class on November 15, 2024",
+  "turns": [
+   {
+    "travel_from": "LAX",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-11-15",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-11-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "014-revise_unsure_new",
+  "task": 14,
+  "kind": "revise_unsure_new",
+  "source": "A/ce4eb78e.json",
+  "user_query": "I'm considering flying from Los Angeles Internationa (LAX) to John F. Kennedy (JFK) in business class on November 15, 2024",
+  "turns": [
+   {
+    "travel_from": "LAX",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-11-15",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-11-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "014-revise_unsure_old",
+  "task": 14,
+  "kind": "revise_unsure_old",
+  "source": "A/ce4eb78e.json",
+  "user_query": "I'm considering flying from Los Angeles Internationa (LAX) to John F. Kennedy (JFK) in business class on November 15, 2024",
+  "turns": [
+   {
+    "travel_from": "LAX",
+    "travel_to": "JFK",
+    "travel_date": "2024-11-15"
+   },
+   {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-11-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "014-retract",
+  "task": 14,
+  "kind": "retract",
+  "source": "A/ce4eb78e.json",
+  "user_query": "I'm considering flying from Los Angeles Internationa (LAX) to John F. Kennedy (JFK) in business class on November 15, 2024",
+  "turns": [
+   {
+    "travel_from": "LAX",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": null
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-11-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "014-domino",
+  "task": 14,
+  "kind": "domino",
+  "source": "A/ce4eb78e.json",
+  "user_query": "I'm considering flying from Los Angeles Internationa (LAX) to John F. Kennedy (JFK) in business class on November 15, 2024",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "LAX",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "JFK",
+   "travel_date": "2024-11-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "015-explicit",
+  "task": 15,
+  "kind": "explicit",
+  "source": "A/d3f295d2.json",
+  "user_query": "I'm planning to fly from San Francisco to Los Angeles. Could you assist in securing a first-class seat using my travel card'? Everything you need\u2014access token (abc123xyz456), traveler details\u2014are at the ready.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-10-15",
+    "travel_class": "first"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-15",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "015-normal",
+  "task": 15,
+  "kind": "normal",
+  "source": "A/d3f295d2.json",
+  "user_query": "I'm planning to fly from San Francisco to Los Angeles. Could you assist in securing a first-class seat using my travel card'? Everything you need\u2014access token (abc123xyz456), traveler details\u2014are at the ready.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-15",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "015-revise_sure",
+  "task": 15,
+  "kind": "revise_sure",
+  "source": "A/d3f295d2.json",
+  "user_query": "I'm planning to fly from San Francisco to Los Angeles. Could you assist in securing a first-class seat using my travel card'? Everything you need\u2014access token (abc123xyz456), traveler details\u2014are at the ready.",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "LAX"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_from",
+  "old_value": "JFK"
+ },
+ {
+  "id": "015-revise_prefer",
+  "task": 15,
+  "kind": "revise_prefer",
+  "source": "A/d3f295d2.json",
+  "user_query": "I'm planning to fly from San Francisco to Los Angeles. Could you assist in securing a first-class seat using my travel card'? Everything you need\u2014access token (abc123xyz456), traveler details\u2014are at the ready.",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "LAX"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_from",
+  "old_value": "JFK"
+ },
+ {
+  "id": "015-revise_unsure_new",
+  "task": 15,
+  "kind": "revise_unsure_new",
+  "source": "A/d3f295d2.json",
+  "user_query": "I'm planning to fly from San Francisco to Los Angeles. Could you assist in securing a first-class seat using my travel card'? Everything you need\u2014access token (abc123xyz456), traveler details\u2014are at the ready.",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "LAX"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_from",
+  "old_value": "JFK"
+ },
+ {
+  "id": "015-revise_unsure_old",
+  "task": 15,
+  "kind": "revise_unsure_old",
+  "source": "A/d3f295d2.json",
+  "user_query": "I'm planning to fly from San Francisco to Los Angeles. Could you assist in securing a first-class seat using my travel card'? Everything you need\u2014access token (abc123xyz456), traveler details\u2014are at the ready.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX"
+   },
+   {
+    "travel_from": "JFK",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_from",
+  "old_value": "JFK"
+ },
+ {
+  "id": "015-retract",
+  "task": 15,
+  "kind": "retract",
+  "source": "A/d3f295d2.json",
+  "user_query": "I'm planning to fly from San Francisco to Los Angeles. Could you assist in securing a first-class seat using my travel card'? Everything you need\u2014access token (abc123xyz456), traveler details\u2014are at the ready.",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "LAX"
+   },
+   {
+    "travel_from": null
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_from",
+  "old_value": "JFK"
+ },
+ {
+  "id": "015-domino",
+  "task": 15,
+  "kind": "domino",
+  "source": "A/d3f295d2.json",
+  "user_query": "I'm planning to fly from San Francisco to Los Angeles. Could you assist in securing a first-class seat using my travel card'? Everything you need\u2014access token (abc123xyz456), traveler details\u2014are at the ready.",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "016-explicit",
+  "task": 16,
+  "kind": "explicit",
+  "source": "A/d72ab215.json",
+  "user_query": "I'd love a comprehensive list of all available departure airports to commence my travel planning, please share what's accessible.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_date": "2024-09-10",
+    "travel_class": "economy"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-09-10",
+   "travel_class": "economy"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "016-normal",
+  "task": 16,
+  "kind": "normal",
+  "source": "A/d72ab215.json",
+  "user_query": "I'd love a comprehensive list of all available departure airports to commence my travel planning, please share what's accessible.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-09-10",
+   "travel_class": "economy"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "016-revise_sure",
+  "task": 16,
+  "kind": "revise_sure",
+  "source": "A/d72ab215.json",
+  "user_query": "I'd love a comprehensive list of all available departure airports to commence my travel planning, please share what's accessible.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "JFK",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-09-10",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "016-revise_prefer",
+  "task": 16,
+  "kind": "revise_prefer",
+  "source": "A/d72ab215.json",
+  "user_query": "I'd love a comprehensive list of all available departure airports to commence my travel planning, please share what's accessible.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "JFK",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-09-10",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "016-revise_unsure_new",
+  "task": 16,
+  "kind": "revise_unsure_new",
+  "source": "A/d72ab215.json",
+  "user_query": "I'd love a comprehensive list of all available departure airports to commence my travel planning, please share what's accessible.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "JFK",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-09-10",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "016-revise_unsure_old",
+  "task": 16,
+  "kind": "revise_unsure_old",
+  "source": "A/d72ab215.json",
+  "user_query": "I'd love a comprehensive list of all available departure airports to commence my travel planning, please share what's accessible.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK"
+   },
+   {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-09-10",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "016-retract",
+  "task": 16,
+  "kind": "retract",
+  "source": "A/d72ab215.json",
+  "user_query": "I'd love a comprehensive list of all available departure airports to commence my travel planning, please share what's accessible.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": null
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-09-10",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "016-domino",
+  "task": 16,
+  "kind": "domino",
+  "source": "A/d72ab215.json",
+  "user_query": "I'd love a comprehensive list of all available departure airports to commence my travel planning, please share what's accessible.",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-09-10",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "017-explicit",
+  "task": 17,
+  "kind": "explicit",
+  "source": "A/daefdd96.json",
+  "user_query": "Imagine planning a trip and you're curious about the flight costs between various airports. Opt to fly from the first airport to the second one in the system's list. Could you provide the expected fare for an economy class ticket on the date 2024-11-15?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_date": "2024-11-15",
+    "travel_class": "economy"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-11-15",
+   "travel_class": "economy"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "017-normal",
+  "task": 17,
+  "kind": "normal",
+  "source": "A/daefdd96.json",
+  "user_query": "Imagine planning a trip and you're curious about the flight costs between various airports. Opt to fly from the first airport to the second one in the system's list. Could you provide the expected fare for an economy class ticket on the date 2024-11-15?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-11-15",
+   "travel_class": "economy"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "017-revise_sure",
+  "task": 17,
+  "kind": "revise_sure",
+  "source": "A/daefdd96.json",
+  "user_query": "Imagine planning a trip and you're curious about the flight costs between various airports. Opt to fly from the first airport to the second one in the system's list. Could you provide the expected fare for an economy class ticket on the date 2024-11-15?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_class": "business"
+   },
+   {
+    "travel_class": "economy",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-11-15",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_class",
+  "old_value": "business"
+ },
+ {
+  "id": "017-revise_prefer",
+  "task": 17,
+  "kind": "revise_prefer",
+  "source": "A/daefdd96.json",
+  "user_query": "Imagine planning a trip and you're curious about the flight costs between various airports. Opt to fly from the first airport to the second one in the system's list. Could you provide the expected fare for an economy class ticket on the date 2024-11-15?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_class": "business"
+   },
+   {
+    "travel_class": "economy",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-11-15",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_class",
+  "old_value": "business"
+ },
+ {
+  "id": "017-revise_unsure_new",
+  "task": 17,
+  "kind": "revise_unsure_new",
+  "source": "A/daefdd96.json",
+  "user_query": "Imagine planning a trip and you're curious about the flight costs between various airports. Opt to fly from the first airport to the second one in the system's list. Could you provide the expected fare for an economy class ticket on the date 2024-11-15?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_class": "business"
+   },
+   {
+    "travel_class": "economy",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-11-15",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_class",
+  "old_value": "business"
+ },
+ {
+  "id": "017-revise_unsure_old",
+  "task": 17,
+  "kind": "revise_unsure_old",
+  "source": "A/daefdd96.json",
+  "user_query": "Imagine planning a trip and you're curious about the flight costs between various airports. Opt to fly from the first airport to the second one in the system's list. Could you provide the expected fare for an economy class ticket on the date 2024-11-15?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "business",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-11-15",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_class",
+  "old_value": "business"
+ },
+ {
+  "id": "017-retract",
+  "task": 17,
+  "kind": "retract",
+  "source": "A/daefdd96.json",
+  "user_query": "Imagine planning a trip and you're curious about the flight costs between various airports. Opt to fly from the first airport to the second one in the system's list. Could you provide the expected fare for an economy class ticket on the date 2024-11-15?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_class": "business"
+   },
+   {
+    "travel_class": null
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-11-15",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_class",
+  "old_value": "business"
+ },
+ {
+  "id": "017-domino",
+  "task": 17,
+  "kind": "domino",
+  "source": "A/daefdd96.json",
+  "user_query": "Imagine planning a trip and you're curious about the flight costs between various airports. Opt to fly from the first airport to the second one in the system's list. Could you provide the expected fare for an economy class ticket on the date 2024-11-15?",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-11-15",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "018-explicit",
+  "task": 18,
+  "kind": "explicit",
+  "source": "A/e7d2f743.json",
+  "user_query": "Hey, I'm in the mood for a last-minute getaway! I need some help figuring out how much it's going to cost for a first-class flight between the first two airports on your destination list. Planning to leave next Friday 19th Sept 2024 and want to make sure I can travel in style.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_date": "2024-09-19",
+    "travel_class": "first"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-09-19",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "018-normal",
+  "task": 18,
+  "kind": "normal",
+  "source": "A/e7d2f743.json",
+  "user_query": "Hey, I'm in the mood for a last-minute getaway! I need some help figuring out how much it's going to cost for a first-class flight between the first two airports on your destination list. Planning to leave next Friday 19th Sept 2024 and want to make sure I can travel in style.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-09-19",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "018-revise_sure",
+  "task": 18,
+  "kind": "revise_sure",
+  "source": "A/e7d2f743.json",
+  "user_query": "Hey, I'm in the mood for a last-minute getaway! I need some help figuring out how much it's going to cost for a first-class flight between the first two airports on your destination list. Planning to leave next Friday 19th Sept 2024 and want to make sure I can travel in style.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-09-19",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-09-19",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "018-revise_prefer",
+  "task": 18,
+  "kind": "revise_prefer",
+  "source": "A/e7d2f743.json",
+  "user_query": "Hey, I'm in the mood for a last-minute getaway! I need some help figuring out how much it's going to cost for a first-class flight between the first two airports on your destination list. Planning to leave next Friday 19th Sept 2024 and want to make sure I can travel in style.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-09-19",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-09-19",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "018-revise_unsure_new",
+  "task": 18,
+  "kind": "revise_unsure_new",
+  "source": "A/e7d2f743.json",
+  "user_query": "Hey, I'm in the mood for a last-minute getaway! I need some help figuring out how much it's going to cost for a first-class flight between the first two airports on your destination list. Planning to leave next Friday 19th Sept 2024 and want to make sure I can travel in style.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-09-19",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-09-19",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "018-revise_unsure_old",
+  "task": 18,
+  "kind": "revise_unsure_old",
+  "source": "A/e7d2f743.json",
+  "user_query": "Hey, I'm in the mood for a last-minute getaway! I need some help figuring out how much it's going to cost for a first-class flight between the first two airports on your destination list. Planning to leave next Friday 19th Sept 2024 and want to make sure I can travel in style.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_date": "2024-09-19"
+   },
+   {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-09-19",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "018-retract",
+  "task": 18,
+  "kind": "retract",
+  "source": "A/e7d2f743.json",
+  "user_query": "Hey, I'm in the mood for a last-minute getaway! I need some help figuring out how much it's going to cost for a first-class flight between the first two airports on your destination list. Planning to leave next Friday 19th Sept 2024 and want to make sure I can travel in style.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": null
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-09-19",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "018-domino",
+  "task": 18,
+  "kind": "domino",
+  "source": "A/e7d2f743.json",
+  "user_query": "Hey, I'm in the mood for a last-minute getaway! I need some help figuring out how much it's going to cost for a first-class flight between the first two airports on your destination list. Planning to leave next Friday 19th Sept 2024 and want to make sure I can travel in style.",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-09-19",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "019-explicit",
+  "task": 19,
+  "kind": "explicit",
+  "source": "A/f146bfcd.json",
+  "user_query": "Hello, I've just come upon a remarkable opportunity to explore some new places, and it's crucial that my documents are up-to-date before I depart. Would you be able to verify my personal details? I'm Michael Thompson, with a birth date of 1995-08-15, and my passport number is 'US1234'.",
+  "turns": [
+   {
+    "travel_from": "LAX",
+    "travel_to": "SFO",
+    "travel_date": "2024-12-15",
+    "travel_class": "first"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "SFO",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "019-normal",
+  "task": 19,
+  "kind": "normal",
+  "source": "A/f146bfcd.json",
+  "user_query": "Hello, I've just come upon a remarkable opportunity to explore some new places, and it's crucial that my documents are up-to-date before I depart. Would you be able to verify my personal details? I'm Michael Thompson, with a birth date of 1995-08-15, and my passport number is 'US1234'.",
+  "turns": [
+   {
+    "travel_from": "LAX",
+    "travel_to": "SFO"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "SFO",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "019-revise_sure",
+  "task": 19,
+  "kind": "revise_sure",
+  "source": "A/f146bfcd.json",
+  "user_query": "Hello, I've just come upon a remarkable opportunity to explore some new places, and it's crucial that my documents are up-to-date before I depart. Would you be able to verify my personal details? I'm Michael Thompson, with a birth date of 1995-08-15, and my passport number is 'US1234'.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "SFO"
+   },
+   {
+    "travel_from": "LAX",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "SFO",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_from",
+  "old_value": "CRH"
+ },
+ {
+  "id": "019-revise_prefer",
+  "task": 19,
+  "kind": "revise_prefer",
+  "source": "A/f146bfcd.json",
+  "user_query": "Hello, I've just come upon a remarkable opportunity to explore some new places, and it's crucial that my documents are up-to-date before I depart. Would you be able to verify my personal details? I'm Michael Thompson, with a birth date of 1995-08-15, and my passport number is 'US1234'.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "SFO"
+   },
+   {
+    "travel_from": "LAX",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "SFO",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_from",
+  "old_value": "CRH"
+ },
+ {
+  "id": "019-revise_unsure_new",
+  "task": 19,
+  "kind": "revise_unsure_new",
+  "source": "A/f146bfcd.json",
+  "user_query": "Hello, I've just come upon a remarkable opportunity to explore some new places, and it's crucial that my documents are up-to-date before I depart. Would you be able to verify my personal details? I'm Michael Thompson, with a birth date of 1995-08-15, and my passport number is 'US1234'.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "SFO"
+   },
+   {
+    "travel_from": "LAX",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "SFO",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_from",
+  "old_value": "CRH"
+ },
+ {
+  "id": "019-revise_unsure_old",
+  "task": 19,
+  "kind": "revise_unsure_old",
+  "source": "A/f146bfcd.json",
+  "user_query": "Hello, I've just come upon a remarkable opportunity to explore some new places, and it's crucial that my documents are up-to-date before I depart. Would you be able to verify my personal details? I'm Michael Thompson, with a birth date of 1995-08-15, and my passport number is 'US1234'.",
+  "turns": [
+   {
+    "travel_from": "LAX",
+    "travel_to": "SFO"
+   },
+   {
+    "travel_from": "CRH",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "SFO",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_from",
+  "old_value": "CRH"
+ },
+ {
+  "id": "019-retract",
+  "task": 19,
+  "kind": "retract",
+  "source": "A/f146bfcd.json",
+  "user_query": "Hello, I've just come upon a remarkable opportunity to explore some new places, and it's crucial that my documents are up-to-date before I depart. Would you be able to verify my personal details? I'm Michael Thompson, with a birth date of 1995-08-15, and my passport number is 'US1234'.",
+  "turns": [
+   {
+    "travel_from": "CRH",
+    "travel_to": "SFO"
+   },
+   {
+    "travel_from": null
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "SFO",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_from",
+  "old_value": "CRH"
+ },
+ {
+  "id": "019-domino",
+  "task": 19,
+  "kind": "domino",
+  "source": "A/f146bfcd.json",
+  "user_query": "Hello, I've just come upon a remarkable opportunity to explore some new places, and it's crucial that my documents are up-to-date before I depart. Would you be able to verify my personal details? I'm Michael Thompson, with a birth date of 1995-08-15, and my passport number is 'US1234'.",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "LAX",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "LAX",
+   "travel_to": "SFO",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "020-explicit",
+  "task": 20,
+  "kind": "explicit",
+  "source": "A/f5c28178.json",
+  "user_query": "As I'm mapping out the logistics for my forthcoming business journey, I require an estimate for airfare traveling from the first to the second airport in your inventory, all set for December 15th, 2024. My travel funds should not exceed $2000, and I'll use my designated access code, 12345-67890. Could you retrieve this information for me?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_date": "2024-12-15",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "020-normal",
+  "task": 20,
+  "kind": "normal",
+  "source": "A/f5c28178.json",
+  "user_query": "As I'm mapping out the logistics for my forthcoming business journey, I require an estimate for airfare traveling from the first to the second airport in your inventory, all set for December 15th, 2024. My travel funds should not exceed $2000, and I'll use my designated access code, 12345-67890. Could you retrieve this information for me?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "020-revise_sure",
+  "task": 20,
+  "kind": "revise_sure",
+  "source": "A/f5c28178.json",
+  "user_query": "As I'm mapping out the logistics for my forthcoming business journey, I require an estimate for airfare traveling from the first to the second airport in your inventory, all set for December 15th, 2024. My travel funds should not exceed $2000, and I'll use my designated access code, 12345-67890. Could you retrieve this information for me?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "SBK",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "020-revise_prefer",
+  "task": 20,
+  "kind": "revise_prefer",
+  "source": "A/f5c28178.json",
+  "user_query": "As I'm mapping out the logistics for my forthcoming business journey, I require an estimate for airfare traveling from the first to the second airport in your inventory, all set for December 15th, 2024. My travel funds should not exceed $2000, and I'll use my designated access code, 12345-67890. Could you retrieve this information for me?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "SBK",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "020-revise_unsure_new",
+  "task": 20,
+  "kind": "revise_unsure_new",
+  "source": "A/f5c28178.json",
+  "user_query": "As I'm mapping out the logistics for my forthcoming business journey, I require an estimate for airfare traveling from the first to the second airport in your inventory, all set for December 15th, 2024. My travel funds should not exceed $2000, and I'll use my designated access code, 12345-67890. Could you retrieve this information for me?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "SBK",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "020-revise_unsure_old",
+  "task": 20,
+  "kind": "revise_unsure_old",
+  "source": "A/f5c28178.json",
+  "user_query": "As I'm mapping out the logistics for my forthcoming business journey, I require an estimate for airfare traveling from the first to the second airport in your inventory, all set for December 15th, 2024. My travel funds should not exceed $2000, and I'll use my designated access code, 12345-67890. Could you retrieve this information for me?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK"
+   },
+   {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "020-retract",
+  "task": 20,
+  "kind": "retract",
+  "source": "A/f5c28178.json",
+  "user_query": "As I'm mapping out the logistics for my forthcoming business journey, I require an estimate for airfare traveling from the first to the second airport in your inventory, all set for December 15th, 2024. My travel funds should not exceed $2000, and I'll use my designated access code, 12345-67890. Could you retrieve this information for me?",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": null
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "020-domino",
+  "task": 20,
+  "kind": "domino",
+  "source": "A/f5c28178.json",
+  "user_query": "As I'm mapping out the logistics for my forthcoming business journey, I require an estimate for airfare traveling from the first to the second airport in your inventory, all set for December 15th, 2024. My travel funds should not exceed $2000, and I'll use my designated access code, 12345-67890. Could you retrieve this information for me?",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-12-15",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "021-explicit",
+  "task": 21,
+  "kind": "explicit",
+  "source": "E/430546b0.json",
+  "user_query": "I'm organizing a trip from San Francisco to Rome on October 10th 2024 and considering to fly business class. Secure a flight reservation that aligns with my financial constraints using my card with id card_7243 and access token 'abc123xyz'. Be sure to convert the ticket cost to EUR for an accurate currency reference.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "CIA",
+    "travel_date": "2024-10-10",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "CIA",
+   "travel_date": "2024-10-10",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "021-normal",
+  "task": 21,
+  "kind": "normal",
+  "source": "E/430546b0.json",
+  "user_query": "I'm organizing a trip from San Francisco to Rome on October 10th 2024 and considering to fly business class. Secure a flight reservation that aligns with my financial constraints using my card with id card_7243 and access token 'abc123xyz'. Be sure to convert the ticket cost to EUR for an accurate currency reference.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "CIA"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "CIA",
+   "travel_date": "2024-10-10",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "021-revise_sure",
+  "task": 21,
+  "kind": "revise_sure",
+  "source": "E/430546b0.json",
+  "user_query": "I'm organizing a trip from San Francisco to Rome on October 10th 2024 and considering to fly business class. Secure a flight reservation that aligns with my financial constraints using my card with id card_7243 and access token 'abc123xyz'. Be sure to convert the ticket cost to EUR for an accurate currency reference.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "CIA",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "business",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "CIA",
+   "travel_date": "2024-10-10",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "021-revise_prefer",
+  "task": 21,
+  "kind": "revise_prefer",
+  "source": "E/430546b0.json",
+  "user_query": "I'm organizing a trip from San Francisco to Rome on October 10th 2024 and considering to fly business class. Secure a flight reservation that aligns with my financial constraints using my card with id card_7243 and access token 'abc123xyz'. Be sure to convert the ticket cost to EUR for an accurate currency reference.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "CIA",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "business",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "CIA",
+   "travel_date": "2024-10-10",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "021-revise_unsure_new",
+  "task": 21,
+  "kind": "revise_unsure_new",
+  "source": "E/430546b0.json",
+  "user_query": "I'm organizing a trip from San Francisco to Rome on October 10th 2024 and considering to fly business class. Secure a flight reservation that aligns with my financial constraints using my card with id card_7243 and access token 'abc123xyz'. Be sure to convert the ticket cost to EUR for an accurate currency reference.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "CIA",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "business",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "CIA",
+   "travel_date": "2024-10-10",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "021-revise_unsure_old",
+  "task": 21,
+  "kind": "revise_unsure_old",
+  "source": "E/430546b0.json",
+  "user_query": "I'm organizing a trip from San Francisco to Rome on October 10th 2024 and considering to fly business class. Secure a flight reservation that aligns with my financial constraints using my card with id card_7243 and access token 'abc123xyz'. Be sure to convert the ticket cost to EUR for an accurate currency reference.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "CIA",
+    "travel_class": "business"
+   },
+   {
+    "travel_class": "economy",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "CIA",
+   "travel_date": "2024-10-10",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "021-retract",
+  "task": 21,
+  "kind": "retract",
+  "source": "E/430546b0.json",
+  "user_query": "I'm organizing a trip from San Francisco to Rome on October 10th 2024 and considering to fly business class. Secure a flight reservation that aligns with my financial constraints using my card with id card_7243 and access token 'abc123xyz'. Be sure to convert the ticket cost to EUR for an accurate currency reference.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "CIA",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": null
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "CIA",
+   "travel_date": "2024-10-10",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_class",
+  "old_value": "economy"
+ },
+ {
+  "id": "021-domino",
+  "task": 21,
+  "kind": "domino",
+  "source": "E/430546b0.json",
+  "user_query": "I'm organizing a trip from San Francisco to Rome on October 10th 2024 and considering to fly business class. Secure a flight reservation that aligns with my financial constraints using my card with id card_7243 and access token 'abc123xyz'. Be sure to convert the ticket cost to EUR for an accurate currency reference.",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "CIA",
+   "travel_date": "2024-10-10",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "022-explicit",
+  "task": 22,
+  "kind": "explicit",
+  "source": "E/4622d440.json",
+  "user_query": "As a high-ranking government official residing in Rivermist, I require assistance in determining the cost of first-class travel from my local airport to JFK International Airport on the 15th of December, 2024. I need the most competitive price available.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-15",
+    "travel_class": "first"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "022-normal",
+  "task": 22,
+  "kind": "normal",
+  "source": "E/4622d440.json",
+  "user_query": "As a high-ranking government official residing in Rivermist, I require assistance in determining the cost of first-class travel from my local airport to JFK International Airport on the 15th of December, 2024. I need the most competitive price available.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "022-revise_sure",
+  "task": 22,
+  "kind": "revise_sure",
+  "source": "E/4622d440.json",
+  "user_query": "As a high-ranking government official residing in Rivermist, I require assistance in determining the cost of first-class travel from my local airport to JFK International Airport on the 15th of December, 2024. I need the most competitive price available.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-12-15",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "022-revise_prefer",
+  "task": 22,
+  "kind": "revise_prefer",
+  "source": "E/4622d440.json",
+  "user_query": "As a high-ranking government official residing in Rivermist, I require assistance in determining the cost of first-class travel from my local airport to JFK International Airport on the 15th of December, 2024. I need the most competitive price available.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-12-15",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "022-revise_unsure_new",
+  "task": 22,
+  "kind": "revise_unsure_new",
+  "source": "E/4622d440.json",
+  "user_query": "As a high-ranking government official residing in Rivermist, I require assistance in determining the cost of first-class travel from my local airport to JFK International Airport on the 15th of December, 2024. I need the most competitive price available.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-12-15",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "022-revise_unsure_old",
+  "task": 22,
+  "kind": "revise_unsure_old",
+  "source": "E/4622d440.json",
+  "user_query": "As a high-ranking government official residing in Rivermist, I require assistance in determining the cost of first-class travel from my local airport to JFK International Airport on the 15th of December, 2024. I need the most competitive price available.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-15"
+   },
+   {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "022-retract",
+  "task": 22,
+  "kind": "retract",
+  "source": "E/4622d440.json",
+  "user_query": "As a high-ranking government official residing in Rivermist, I require assistance in determining the cost of first-class travel from my local airport to JFK International Airport on the 15th of December, 2024. I need the most competitive price available.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": null
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-25"
+ },
+ {
+  "id": "022-domino",
+  "task": 22,
+  "kind": "domino",
+  "source": "E/4622d440.json",
+  "user_query": "As a high-ranking government official residing in Rivermist, I require assistance in determining the cost of first-class travel from my local airport to JFK International Airport on the 15th of December, 2024. I need the most competitive price available.",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "JFK",
+   "travel_date": "2024-12-15",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "023-explicit",
+  "task": 23,
+  "kind": "explicit",
+  "source": "E/a7a39210.json",
+  "user_query": "I need to arrange a business class flight for Robert Trenton from San Francisco to Los Angeles on November 25th 2024. The reservation should be made using his travel card with id card_3487 and access code 1293. Following the booking, I have to ensure an invoice is issued to verify the charges.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-11-25",
+    "travel_class": "business"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-25",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "023-normal",
+  "task": 23,
+  "kind": "normal",
+  "source": "E/a7a39210.json",
+  "user_query": "I need to arrange a business class flight for Robert Trenton from San Francisco to Los Angeles on November 25th 2024. The reservation should be made using his travel card with id card_3487 and access code 1293. Following the booking, I have to ensure an invoice is issued to verify the charges.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-25",
+   "travel_class": "business"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "023-revise_sure",
+  "task": 23,
+  "kind": "revise_sure",
+  "source": "E/a7a39210.json",
+  "user_query": "I need to arrange a business class flight for Robert Trenton from San Francisco to Los Angeles on November 25th 2024. The reservation should be made using his travel card with id card_3487 and access code 1293. Following the booking, I have to ensure an invoice is issued to verify the charges.",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "LAX"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-25",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "JFK"
+ },
+ {
+  "id": "023-revise_prefer",
+  "task": 23,
+  "kind": "revise_prefer",
+  "source": "E/a7a39210.json",
+  "user_query": "I need to arrange a business class flight for Robert Trenton from San Francisco to Los Angeles on November 25th 2024. The reservation should be made using his travel card with id card_3487 and access code 1293. Following the booking, I have to ensure an invoice is issued to verify the charges.",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "LAX"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-25",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "JFK"
+ },
+ {
+  "id": "023-revise_unsure_new",
+  "task": 23,
+  "kind": "revise_unsure_new",
+  "source": "E/a7a39210.json",
+  "user_query": "I need to arrange a business class flight for Robert Trenton from San Francisco to Los Angeles on November 25th 2024. The reservation should be made using his travel card with id card_3487 and access code 1293. Following the booking, I have to ensure an invoice is issued to verify the charges.",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "LAX"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-25",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "JFK"
+ },
+ {
+  "id": "023-revise_unsure_old",
+  "task": 23,
+  "kind": "revise_unsure_old",
+  "source": "E/a7a39210.json",
+  "user_query": "I need to arrange a business class flight for Robert Trenton from San Francisco to Los Angeles on November 25th 2024. The reservation should be made using his travel card with id card_3487 and access code 1293. Following the booking, I have to ensure an invoice is issued to verify the charges.",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX"
+   },
+   {
+    "travel_from": "JFK",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-25",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "JFK"
+ },
+ {
+  "id": "023-retract",
+  "task": 23,
+  "kind": "retract",
+  "source": "E/a7a39210.json",
+  "user_query": "I need to arrange a business class flight for Robert Trenton from San Francisco to Los Angeles on November 25th 2024. The reservation should be made using his travel card with id card_3487 and access code 1293. Following the booking, I have to ensure an invoice is issued to verify the charges.",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "LAX"
+   },
+   {
+    "travel_from": null
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-25",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_from",
+  "old_value": "JFK"
+ },
+ {
+  "id": "023-domino",
+  "task": 23,
+  "kind": "domino",
+  "source": "E/a7a39210.json",
+  "user_query": "I need to arrange a business class flight for Robert Trenton from San Francisco to Los Angeles on November 25th 2024. The reservation should be made using his travel card with id card_3487 and access code 1293. Following the booking, I have to ensure an invoice is issued to verify the charges.",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-11-25",
+   "travel_class": "business"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "024-explicit",
+  "task": 24,
+  "kind": "explicit",
+  "source": "E/b9c43a48.json",
+  "user_query": "I've recently retired after spending years poring over electrical blueprints and energy systems across Spain. I'm planning an invigorating journey and wish to ensure all my travel details are meticulously verified. Please confirm my information using the passport number '123456' I've shared with you. The name and DoB are Carlos Martinez and March 23, 1968",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "LAX",
+    "travel_date": "2024-10-10",
+    "travel_class": "first"
+   }
+  ],
+  "truth": {
+   "travel_from": "JFK",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-10",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "024-normal",
+  "task": 24,
+  "kind": "normal",
+  "source": "E/b9c43a48.json",
+  "user_query": "I've recently retired after spending years poring over electrical blueprints and energy systems across Spain. I'm planning an invigorating journey and wish to ensure all my travel details are meticulously verified. Please confirm my information using the passport number '123456' I've shared with you. The name and DoB are Carlos Martinez and March 23, 1968",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "LAX"
+   }
+  ],
+  "truth": {
+   "travel_from": "JFK",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-10",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "024-revise_sure",
+  "task": 24,
+  "kind": "revise_sure",
+  "source": "E/b9c43a48.json",
+  "user_query": "I've recently retired after spending years poring over electrical blueprints and energy systems across Spain. I'm planning an invigorating journey and wish to ensure all my travel details are meticulously verified. Please confirm my information using the passport number '123456' I've shared with you. The name and DoB are Carlos Martinez and March 23, 1968",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "LAX",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "JFK",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-10",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "024-revise_prefer",
+  "task": 24,
+  "kind": "revise_prefer",
+  "source": "E/b9c43a48.json",
+  "user_query": "I've recently retired after spending years poring over electrical blueprints and energy systems across Spain. I'm planning an invigorating journey and wish to ensure all my travel details are meticulously verified. Please confirm my information using the passport number '123456' I've shared with you. The name and DoB are Carlos Martinez and March 23, 1968",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "LAX",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "JFK",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-10",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "024-revise_unsure_new",
+  "task": 24,
+  "kind": "revise_unsure_new",
+  "source": "E/b9c43a48.json",
+  "user_query": "I've recently retired after spending years poring over electrical blueprints and energy systems across Spain. I'm planning an invigorating journey and wish to ensure all my travel details are meticulously verified. Please confirm my information using the passport number '123456' I've shared with you. The name and DoB are Carlos Martinez and March 23, 1968",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": "LAX",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "JFK",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-10",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "024-revise_unsure_old",
+  "task": 24,
+  "kind": "revise_unsure_old",
+  "source": "E/b9c43a48.json",
+  "user_query": "I've recently retired after spending years poring over electrical blueprints and energy systems across Spain. I'm planning an invigorating journey and wish to ensure all my travel details are meticulously verified. Please confirm my information using the passport number '123456' I've shared with you. The name and DoB are Carlos Martinez and March 23, 1968",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "LAX"
+   },
+   {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "JFK",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-10",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "024-retract",
+  "task": 24,
+  "kind": "retract",
+  "source": "E/b9c43a48.json",
+  "user_query": "I've recently retired after spending years poring over electrical blueprints and energy systems across Spain. I'm planning an invigorating journey and wish to ensure all my travel details are meticulously verified. Please confirm my information using the passport number '123456' I've shared with you. The name and DoB are Carlos Martinez and March 23, 1968",
+  "turns": [
+   {
+    "travel_from": "JFK",
+    "travel_to": "ATV"
+   },
+   {
+    "travel_to": null
+   }
+  ],
+  "truth": {
+   "travel_from": "JFK",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-10",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "ATV"
+ },
+ {
+  "id": "024-domino",
+  "task": 24,
+  "kind": "domino",
+  "source": "E/b9c43a48.json",
+  "user_query": "I've recently retired after spending years poring over electrical blueprints and energy systems across Spain. I'm planning an invigorating journey and wish to ensure all my travel details are meticulously verified. Please confirm my information using the passport number '123456' I've shared with you. The name and DoB are Carlos Martinez and March 23, 1968",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "JFK",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "JFK",
+   "travel_to": "LAX",
+   "travel_date": "2024-10-10",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "025-explicit",
+  "task": 25,
+  "kind": "explicit",
+  "source": "E/ccdc93cf.json",
+  "user_query": "Wanderlust is calling, and I'm mapping out my travel from Rivermist to Stonebrook in the month of October\u2014the skies above must know my next destination! Share with me, if you will, what coin I must trade for a humble economy class seat on the 6th day of October in 2024.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_date": "2024-10-06",
+    "travel_class": "economy"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-10-06",
+   "travel_class": "economy"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "025-normal",
+  "task": 25,
+  "kind": "normal",
+  "source": "E/ccdc93cf.json",
+  "user_query": "Wanderlust is calling, and I'm mapping out my travel from Rivermist to Stonebrook in the month of October\u2014the skies above must know my next destination! Share with me, if you will, what coin I must trade for a humble economy class seat on the 6th day of October in 2024.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-10-06",
+   "travel_class": "economy"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "025-revise_sure",
+  "task": 25,
+  "kind": "revise_sure",
+  "source": "E/ccdc93cf.json",
+  "user_query": "Wanderlust is calling, and I'm mapping out my travel from Rivermist to Stonebrook in the month of October\u2014the skies above must know my next destination! Share with me, if you will, what coin I must trade for a humble economy class seat on the 6th day of October in 2024.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_class": "business"
+   },
+   {
+    "travel_class": "economy",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-10-06",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_class",
+  "old_value": "business"
+ },
+ {
+  "id": "025-revise_prefer",
+  "task": 25,
+  "kind": "revise_prefer",
+  "source": "E/ccdc93cf.json",
+  "user_query": "Wanderlust is calling, and I'm mapping out my travel from Rivermist to Stonebrook in the month of October\u2014the skies above must know my next destination! Share with me, if you will, what coin I must trade for a humble economy class seat on the 6th day of October in 2024.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_class": "business"
+   },
+   {
+    "travel_class": "economy",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-10-06",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_class",
+  "old_value": "business"
+ },
+ {
+  "id": "025-revise_unsure_new",
+  "task": 25,
+  "kind": "revise_unsure_new",
+  "source": "E/ccdc93cf.json",
+  "user_query": "Wanderlust is calling, and I'm mapping out my travel from Rivermist to Stonebrook in the month of October\u2014the skies above must know my next destination! Share with me, if you will, what coin I must trade for a humble economy class seat on the 6th day of October in 2024.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_class": "business"
+   },
+   {
+    "travel_class": "economy",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-10-06",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_class",
+  "old_value": "business"
+ },
+ {
+  "id": "025-revise_unsure_old",
+  "task": 25,
+  "kind": "revise_unsure_old",
+  "source": "E/ccdc93cf.json",
+  "user_query": "Wanderlust is calling, and I'm mapping out my travel from Rivermist to Stonebrook in the month of October\u2014the skies above must know my next destination! Share with me, if you will, what coin I must trade for a humble economy class seat on the 6th day of October in 2024.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_class": "economy"
+   },
+   {
+    "travel_class": "business",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-10-06",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_class",
+  "old_value": "business"
+ },
+ {
+  "id": "025-retract",
+  "task": 25,
+  "kind": "retract",
+  "source": "E/ccdc93cf.json",
+  "user_query": "Wanderlust is calling, and I'm mapping out my travel from Rivermist to Stonebrook in the month of October\u2014the skies above must know my next destination! Share with me, if you will, what coin I must trade for a humble economy class seat on the 6th day of October in 2024.",
+  "turns": [
+   {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_class": "business"
+   },
+   {
+    "travel_class": null
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-10-06",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_class",
+  "old_value": "business"
+ },
+ {
+  "id": "025-domino",
+  "task": 25,
+  "kind": "domino",
+  "source": "E/ccdc93cf.json",
+  "user_query": "Wanderlust is calling, and I'm mapping out my travel from Rivermist to Stonebrook in the month of October\u2014the skies above must know my next destination! Share with me, if you will, what coin I must trade for a humble economy class seat on the 6th day of October in 2024.",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "RMS",
+   "travel_to": "SBK",
+   "travel_date": "2024-10-06",
+   "travel_class": "economy"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ },
+ {
+  "id": "026-explicit",
+  "task": 26,
+  "kind": "explicit",
+  "source": "E/e834bcc3.json",
+  "user_query": "I'd like to arrange a first-class ticket for a trip from San Francisco to Los Angeles on December 25th this year 2024. Please make sure it processes through my credit account using the ID '6789' and access token 'abc123token'. The booking should be made under the name Carlina Yates, so ensure all details align with this information.\n\nHowever, I just realized I'm unable to travel on that specified date anymore. I need the booking for that flight to be canceled.\n\nLastly, given that the trip to Los Angeles can't happen, I'd like to share a tweet expressing disappointment over the canceled plans, content can be 'Disappointed over my canceled plans.' authenticate using username 'john' and password 'john1234'. Also, add the hashtag #TravelWoes and tag @CarlinaYates. Could you prepare that for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-25",
+    "travel_class": "first"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-25",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "026-normal",
+  "task": 26,
+  "kind": "normal",
+  "source": "E/e834bcc3.json",
+  "user_query": "I'd like to arrange a first-class ticket for a trip from San Francisco to Los Angeles on December 25th this year 2024. Please make sure it processes through my credit account using the ID '6789' and access token 'abc123token'. The booking should be made under the name Carlina Yates, so ensure all details align with this information.\n\nHowever, I just realized I'm unable to travel on that specified date anymore. I need the booking for that flight to be canceled.\n\nLastly, given that the trip to Los Angeles can't happen, I'd like to share a tweet expressing disappointment over the canceled plans, content can be 'Disappointed over my canceled plans.' authenticate using username 'john' and password 'john1234'. Also, add the hashtag #TravelWoes and tag @CarlinaYates. Could you prepare that for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-25",
+   "travel_class": "first"
+  },
+  "changed_param": null,
+  "old_value": null
+ },
+ {
+  "id": "026-revise_sure",
+  "task": 26,
+  "kind": "revise_sure",
+  "source": "E/e834bcc3.json",
+  "user_query": "I'd like to arrange a first-class ticket for a trip from San Francisco to Los Angeles on December 25th this year 2024. Please make sure it processes through my credit account using the ID '6789' and access token 'abc123token'. The booking should be made under the name Carlina Yates, so ensure all details align with this information.\n\nHowever, I just realized I'm unable to travel on that specified date anymore. I need the booking for that flight to be canceled.\n\nLastly, given that the trip to Los Angeles can't happen, I'd like to share a tweet expressing disappointment over the canceled plans, content can be 'Disappointed over my canceled plans.' authenticate using username 'john' and password 'john1234'. Also, add the hashtag #TravelWoes and tag @CarlinaYates. Could you prepare that for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-26"
+   },
+   {
+    "travel_date": "2024-12-25",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-25",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-26"
+ },
+ {
+  "id": "026-revise_prefer",
+  "task": 26,
+  "kind": "revise_prefer",
+  "source": "E/e834bcc3.json",
+  "user_query": "I'd like to arrange a first-class ticket for a trip from San Francisco to Los Angeles on December 25th this year 2024. Please make sure it processes through my credit account using the ID '6789' and access token 'abc123token'. The booking should be made under the name Carlina Yates, so ensure all details align with this information.\n\nHowever, I just realized I'm unable to travel on that specified date anymore. I need the booking for that flight to be canceled.\n\nLastly, given that the trip to Los Angeles can't happen, I'd like to share a tweet expressing disappointment over the canceled plans, content can be 'Disappointed over my canceled plans.' authenticate using username 'john' and password 'john1234'. Also, add the hashtag #TravelWoes and tag @CarlinaYates. Could you prepare that for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-26"
+   },
+   {
+    "travel_date": "2024-12-25",
+    "confidence": "PREFER"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-25",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-26"
+ },
+ {
+  "id": "026-revise_unsure_new",
+  "task": 26,
+  "kind": "revise_unsure_new",
+  "source": "E/e834bcc3.json",
+  "user_query": "I'd like to arrange a first-class ticket for a trip from San Francisco to Los Angeles on December 25th this year 2024. Please make sure it processes through my credit account using the ID '6789' and access token 'abc123token'. The booking should be made under the name Carlina Yates, so ensure all details align with this information.\n\nHowever, I just realized I'm unable to travel on that specified date anymore. I need the booking for that flight to be canceled.\n\nLastly, given that the trip to Los Angeles can't happen, I'd like to share a tweet expressing disappointment over the canceled plans, content can be 'Disappointed over my canceled plans.' authenticate using username 'john' and password 'john1234'. Also, add the hashtag #TravelWoes and tag @CarlinaYates. Could you prepare that for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-26"
+   },
+   {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-25",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-26"
+ },
+ {
+  "id": "026-revise_unsure_old",
+  "task": 26,
+  "kind": "revise_unsure_old",
+  "source": "E/e834bcc3.json",
+  "user_query": "I'd like to arrange a first-class ticket for a trip from San Francisco to Los Angeles on December 25th this year 2024. Please make sure it processes through my credit account using the ID '6789' and access token 'abc123token'. The booking should be made under the name Carlina Yates, so ensure all details align with this information.\n\nHowever, I just realized I'm unable to travel on that specified date anymore. I need the booking for that flight to be canceled.\n\nLastly, given that the trip to Los Angeles can't happen, I'd like to share a tweet expressing disappointment over the canceled plans, content can be 'Disappointed over my canceled plans.' authenticate using username 'john' and password 'john1234'. Also, add the hashtag #TravelWoes and tag @CarlinaYates. Could you prepare that for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-25"
+   },
+   {
+    "travel_date": "2024-12-26",
+    "confidence": "UNSURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-25",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-26"
+ },
+ {
+  "id": "026-retract",
+  "task": 26,
+  "kind": "retract",
+  "source": "E/e834bcc3.json",
+  "user_query": "I'd like to arrange a first-class ticket for a trip from San Francisco to Los Angeles on December 25th this year 2024. Please make sure it processes through my credit account using the ID '6789' and access token 'abc123token'. The booking should be made under the name Carlina Yates, so ensure all details align with this information.\n\nHowever, I just realized I'm unable to travel on that specified date anymore. I need the booking for that flight to be canceled.\n\nLastly, given that the trip to Los Angeles can't happen, I'd like to share a tweet expressing disappointment over the canceled plans, content can be 'Disappointed over my canceled plans.' authenticate using username 'john' and password 'john1234'. Also, add the hashtag #TravelWoes and tag @CarlinaYates. Could you prepare that for me?",
+  "turns": [
+   {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-26"
+   },
+   {
+    "travel_date": null
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-25",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_date",
+  "old_value": "2024-12-26"
+ },
+ {
+  "id": "026-domino",
+  "task": 26,
+  "kind": "domino",
+  "source": "E/e834bcc3.json",
+  "user_query": "I'd like to arrange a first-class ticket for a trip from San Francisco to Los Angeles on December 25th this year 2024. Please make sure it processes through my credit account using the ID '6789' and access token 'abc123token'. The booking should be made under the name Carlina Yates, so ensure all details align with this information.\n\nHowever, I just realized I'm unable to travel on that specified date anymore. I need the booking for that flight to be canceled.\n\nLastly, given that the trip to Los Angeles can't happen, I'd like to share a tweet expressing disappointment over the canceled plans, content can be 'Disappointed over my canceled plans.' authenticate using username 'john' and password 'john1234'. Also, add the hashtag #TravelWoes and tag @CarlinaYates. Could you prepare that for me?",
+  "turns": [
+   {
+    "travel_from": "LHR",
+    "travel_to": "CDG"
+   },
+   {
+    "travel_from": "SFO",
+    "confidence": "SURE"
+   }
+  ],
+  "truth": {
+   "travel_from": "SFO",
+   "travel_to": "LAX",
+   "travel_date": "2024-12-25",
+   "travel_class": "first"
+  },
+  "changed_param": "travel_to",
+  "old_value": "CDG"
+ }
+]
