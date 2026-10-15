@@ -1,0 +1,4122 @@
+[
+  {
+    "id": "000-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from ORD to ATV.",
+      "Actually, change my destination to LAX."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "ORD",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "ORD",
+      "travel_to": "LAX",
+      "travel_date": "2024-08-10",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "000-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from ORD to ATV.",
+      "Actually, I would prefer LAX as my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "ORD",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "LAX",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "ORD",
+      "travel_to": "LAX",
+      "travel_date": "2024-08-10",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "000-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from ORD to ATV.",
+      "Maybe change my destination to LAX, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "ORD",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "LAX",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "ORD",
+      "travel_to": "LAX",
+      "travel_date": "2024-08-10",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "000-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from ORD to LAX.",
+      "Maybe change my destination to ATV, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "ORD",
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "ATV",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "ORD",
+      "travel_to": "LAX",
+      "travel_date": "2024-08-10",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "000-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from ORD to ATV.",
+      "Actually, forget my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "ORD",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "ORD",
+      "travel_to": "LAX",
+      "travel_date": "2024-08-10",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "000-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to ORD."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "ORD",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "ORD",
+      "travel_to": "LAX",
+      "travel_date": "2024-08-10",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "001-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from RMS to JFK, economy class.",
+      "Actually, change my travel class to first."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "JFK",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "first",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-12-01",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "001-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from RMS to JFK, economy class.",
+      "Actually, I would prefer first class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "JFK",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "first",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-12-01",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "001-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from RMS to JFK, economy class.",
+      "Maybe change my travel class to first, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "JFK",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "first",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-12-01",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "001-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from RMS to JFK, first class.",
+      "Maybe change my travel class to economy, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "JFK",
+        "travel_class": "first",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "economy",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-12-01",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "001-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from RMS to JFK, economy class.",
+      "Actually, forget my travel class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "JFK",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-12-01",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "001-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to RMS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-12-01",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "002-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from SFO to LAX on 2024-12-25.",
+      "Actually, change my travel date to 2024-11-10."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-11-10",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-10",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "002-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from SFO to LAX on 2024-12-25.",
+      "Actually, I would prefer to travel on 2024-11-10."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-11-10",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-10",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "002-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from SFO to LAX on 2024-12-25.",
+      "Maybe change my travel date to 2024-11-10, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-11-10",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-10",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "002-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from SFO to LAX on 2024-11-10.",
+      "Maybe change my travel date to 2024-12-25, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_date": "2024-11-10",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-25",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-10",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "002-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from SFO to LAX on 2024-12-25.",
+      "Actually, forget my travel date."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-10",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "002-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to SFO."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-10",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "003-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from CRH to JFK.",
+      "Actually, change my departure to LAX."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "JFK",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "LAX",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "JFK",
+      "travel_date": "2024-04-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "003-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from CRH to JFK.",
+      "Actually, I would prefer LAX as my departure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "JFK",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "LAX",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "JFK",
+      "travel_date": "2024-04-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "003-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from CRH to JFK.",
+      "Maybe change my departure to LAX, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "JFK",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "LAX",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "JFK",
+      "travel_date": "2024-04-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "003-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from LAX to JFK.",
+      "Maybe change my departure to CRH, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LAX",
+        "travel_to": "JFK",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "CRH",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "JFK",
+      "travel_date": "2024-04-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "003-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from CRH to JFK.",
+      "Actually, forget my departure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "JFK",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "JFK",
+      "travel_date": "2024-04-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "003-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to LAX."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "LAX",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "JFK",
+      "travel_date": "2024-04-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "004-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from CRH to ATV.",
+      "Actually, change my destination to RMS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "RMS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "CRH",
+      "travel_to": "RMS",
+      "travel_date": "2022-07-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "004-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from CRH to ATV.",
+      "Actually, I would prefer RMS as my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "RMS",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "CRH",
+      "travel_to": "RMS",
+      "travel_date": "2022-07-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "004-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from CRH to ATV.",
+      "Maybe change my destination to RMS, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "RMS",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "CRH",
+      "travel_to": "RMS",
+      "travel_date": "2022-07-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "004-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from CRH to RMS.",
+      "Maybe change my destination to ATV, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "RMS",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "ATV",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "CRH",
+      "travel_to": "RMS",
+      "travel_date": "2022-07-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "004-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from CRH to ATV.",
+      "Actually, forget my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "CRH",
+      "travel_to": "RMS",
+      "travel_date": "2022-07-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "004-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from JFK to BOS.",
+      "Actually, change my departure to CRH."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "BOS",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "CRH",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "CRH",
+      "travel_to": "RMS",
+      "travel_date": "2022-07-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "005-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from RMS to LAX, economy class.",
+      "Actually, change my travel class to business."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "LAX",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "business",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "LAX",
+      "travel_date": "2024-08-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "005-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from RMS to LAX, economy class.",
+      "Actually, I would prefer business class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "LAX",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "business",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "LAX",
+      "travel_date": "2024-08-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "005-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from RMS to LAX, economy class.",
+      "Maybe change my travel class to business, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "LAX",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "business",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "LAX",
+      "travel_date": "2024-08-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "005-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from RMS to LAX, business class.",
+      "Maybe change my travel class to economy, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "LAX",
+        "travel_class": "business",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "economy",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "LAX",
+      "travel_date": "2024-08-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "005-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from RMS to LAX, economy class.",
+      "Actually, forget my travel class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "LAX",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "LAX",
+      "travel_date": "2024-08-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "005-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to RMS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "LAX",
+      "travel_date": "2024-08-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "006-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from RMS to LAX on 2024-12-25.",
+      "Actually, change my travel date to 2024-12-15."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-15",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "LAX",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "006-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from RMS to LAX on 2024-12-25.",
+      "Actually, I would prefer to travel on 2024-12-15."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-15",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "LAX",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "006-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from RMS to LAX on 2024-12-25.",
+      "Maybe change my travel date to 2024-12-15, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-15",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "LAX",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "006-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from RMS to LAX on 2024-12-15.",
+      "Maybe change my travel date to 2024-12-25, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-15",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-25",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "LAX",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "006-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from RMS to LAX on 2024-12-25.",
+      "Actually, forget my travel date."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "LAX",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "006-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to RMS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "LAX",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "007-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from ATV to GFD.",
+      "Actually, change my departure to RMS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "ATV",
+        "travel_to": "GFD",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "GFD",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "007-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from ATV to GFD.",
+      "Actually, I would prefer RMS as my departure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "ATV",
+        "travel_to": "GFD",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "GFD",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "007-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from ATV to GFD.",
+      "Maybe change my departure to RMS, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "ATV",
+        "travel_to": "GFD",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "GFD",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "007-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from RMS to GFD.",
+      "Maybe change my departure to ATV, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "GFD",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "ATV",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "GFD",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "007-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from ATV to GFD.",
+      "Actually, forget my departure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "ATV",
+        "travel_to": "GFD",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "GFD",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "007-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to RMS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "GFD",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "008-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from SFO to ATV.",
+      "Actually, change my destination to LAX."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-16",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "008-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from SFO to ATV.",
+      "Actually, I would prefer LAX as my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "LAX",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-16",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "008-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from SFO to ATV.",
+      "Maybe change my destination to LAX, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "LAX",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-16",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "008-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from SFO to LAX.",
+      "Maybe change my destination to ATV, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "ATV",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-16",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "008-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from SFO to ATV.",
+      "Actually, forget my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-16",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "008-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to SFO."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-16",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "009-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from SFO to ORD, economy class.",
+      "Actually, change my travel class to first."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "ORD",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "first",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "ORD",
+      "travel_date": "2024-11-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "009-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from SFO to ORD, economy class.",
+      "Actually, I would prefer first class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "ORD",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "first",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "ORD",
+      "travel_date": "2024-11-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "009-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from SFO to ORD, economy class.",
+      "Maybe change my travel class to first, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "ORD",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "first",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "ORD",
+      "travel_date": "2024-11-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "009-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from SFO to ORD, first class.",
+      "Maybe change my travel class to economy, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "ORD",
+        "travel_class": "first",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "economy",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "ORD",
+      "travel_date": "2024-11-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "009-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from SFO to ORD, economy class.",
+      "Actually, forget my travel class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "ORD",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "ORD",
+      "travel_date": "2024-11-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "009-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to SFO."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "ORD",
+      "travel_date": "2024-11-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "010-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from CRH to PHV on 2024-12-25.",
+      "Actually, change my travel date to 2024-03-03."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "PHV",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-03-03",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "CRH",
+      "travel_to": "PHV",
+      "travel_date": "2024-03-03",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "010-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from CRH to PHV on 2024-12-25.",
+      "Actually, I would prefer to travel on 2024-03-03."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "PHV",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-03-03",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "CRH",
+      "travel_to": "PHV",
+      "travel_date": "2024-03-03",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "010-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from CRH to PHV on 2024-12-25.",
+      "Maybe change my travel date to 2024-03-03, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "PHV",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-03-03",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "CRH",
+      "travel_to": "PHV",
+      "travel_date": "2024-03-03",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "010-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from CRH to PHV on 2024-03-03.",
+      "Maybe change my travel date to 2024-12-25, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "PHV",
+        "travel_date": "2024-03-03",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-25",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "CRH",
+      "travel_to": "PHV",
+      "travel_date": "2024-03-03",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "010-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from CRH to PHV on 2024-12-25.",
+      "Actually, forget my travel date."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "PHV",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "CRH",
+      "travel_to": "PHV",
+      "travel_date": "2024-03-03",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "010-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from JFK to BOS.",
+      "Actually, change my departure to CRH."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "BOS",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "CRH",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "CRH",
+      "travel_to": "PHV",
+      "travel_date": "2024-03-03",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "011-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from BOS to SVP.",
+      "Actually, change my departure to ORD."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "BOS",
+        "travel_to": "SVP",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "ORD",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "ORD",
+      "travel_to": "SVP",
+      "travel_date": "2024-07-14",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "011-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from BOS to SVP.",
+      "Actually, I would prefer ORD as my departure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "BOS",
+        "travel_to": "SVP",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "ORD",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "ORD",
+      "travel_to": "SVP",
+      "travel_date": "2024-07-14",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "011-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from BOS to SVP.",
+      "Maybe change my departure to ORD, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "BOS",
+        "travel_to": "SVP",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "ORD",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "ORD",
+      "travel_to": "SVP",
+      "travel_date": "2024-07-14",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "011-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from ORD to SVP.",
+      "Maybe change my departure to BOS, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "ORD",
+        "travel_to": "SVP",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "BOS",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "ORD",
+      "travel_to": "SVP",
+      "travel_date": "2024-07-14",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "011-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from BOS to SVP.",
+      "Actually, forget my departure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "BOS",
+        "travel_to": "SVP",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "ORD",
+      "travel_to": "SVP",
+      "travel_date": "2024-07-14",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "011-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to ORD."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "ORD",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "ORD",
+      "travel_to": "SVP",
+      "travel_date": "2024-07-14",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "012-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from RMS to ATV.",
+      "Actually, change my destination to BOS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "BOS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "BOS",
+      "travel_date": "2024-10-31",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "012-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from RMS to ATV.",
+      "Actually, I would prefer BOS as my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "BOS",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "BOS",
+      "travel_date": "2024-10-31",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "012-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from RMS to ATV.",
+      "Maybe change my destination to BOS, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "BOS",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "BOS",
+      "travel_date": "2024-10-31",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "012-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from RMS to BOS.",
+      "Maybe change my destination to ATV, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "BOS",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "ATV",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "BOS",
+      "travel_date": "2024-10-31",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "012-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from RMS to ATV.",
+      "Actually, forget my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "BOS",
+      "travel_date": "2024-10-31",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "012-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to RMS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "BOS",
+      "travel_date": "2024-10-31",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "013-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from SFO to LAX, economy class.",
+      "Actually, change my travel class to first."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "first",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "013-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from SFO to LAX, economy class.",
+      "Actually, I would prefer first class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "first",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "013-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from SFO to LAX, economy class.",
+      "Maybe change my travel class to first, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "first",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "013-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from SFO to LAX, first class.",
+      "Maybe change my travel class to economy, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_class": "first",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "economy",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "013-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from SFO to LAX, economy class.",
+      "Actually, forget my travel class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "013-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to SFO."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "014-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from LAX to JFK on 2024-12-25.",
+      "Actually, change my travel date to 2024-11-15."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LAX",
+        "travel_to": "JFK",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-11-15",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "JFK",
+      "travel_date": "2024-11-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "014-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from LAX to JFK on 2024-12-25.",
+      "Actually, I would prefer to travel on 2024-11-15."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LAX",
+        "travel_to": "JFK",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-11-15",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "JFK",
+      "travel_date": "2024-11-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "014-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from LAX to JFK on 2024-12-25.",
+      "Maybe change my travel date to 2024-11-15, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LAX",
+        "travel_to": "JFK",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-11-15",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "JFK",
+      "travel_date": "2024-11-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "014-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from LAX to JFK on 2024-11-15.",
+      "Maybe change my travel date to 2024-12-25, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LAX",
+        "travel_to": "JFK",
+        "travel_date": "2024-11-15",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-25",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "JFK",
+      "travel_date": "2024-11-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "014-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from LAX to JFK on 2024-12-25.",
+      "Actually, forget my travel date."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LAX",
+        "travel_to": "JFK",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "JFK",
+      "travel_date": "2024-11-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "014-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to LAX."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "LAX",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "JFK",
+      "travel_date": "2024-11-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "015-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from JFK to LAX.",
+      "Actually, change my departure to SFO."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-10-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "015-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from JFK to LAX.",
+      "Actually, I would prefer SFO as my departure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-10-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "015-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from JFK to LAX.",
+      "Maybe change my departure to SFO, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-10-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "015-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from SFO to LAX.",
+      "Maybe change my departure to JFK, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "JFK",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-10-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "015-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from JFK to LAX.",
+      "Actually, forget my departure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-10-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "015-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to SFO."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-10-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "016-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from RMS to ATV.",
+      "Actually, change my destination to JFK."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "JFK",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-09-10",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "016-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from RMS to ATV.",
+      "Actually, I would prefer JFK as my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "JFK",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-09-10",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "016-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from RMS to ATV.",
+      "Maybe change my destination to JFK, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "JFK",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-09-10",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "016-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from RMS to JFK.",
+      "Maybe change my destination to ATV, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "JFK",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "ATV",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-09-10",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "016-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from RMS to ATV.",
+      "Actually, forget my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-09-10",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "016-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to RMS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-09-10",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "017-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from RMS to SBK, business class.",
+      "Actually, change my travel class to economy."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_class": "business",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "economy",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-11-15",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "017-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from RMS to SBK, business class.",
+      "Actually, I would prefer economy class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_class": "business",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "economy",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-11-15",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "017-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from RMS to SBK, business class.",
+      "Maybe change my travel class to economy, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_class": "business",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "economy",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-11-15",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "017-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from RMS to SBK, economy class.",
+      "Maybe change my travel class to business, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "business",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-11-15",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "017-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from RMS to SBK, business class.",
+      "Actually, forget my travel class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_class": "business",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-11-15",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "017-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to RMS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-11-15",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "018-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from RMS to SBK on 2024-12-25.",
+      "Actually, change my travel date to 2024-09-19."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-09-19",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-09-19",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "018-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from RMS to SBK on 2024-12-25.",
+      "Actually, I would prefer to travel on 2024-09-19."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-09-19",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-09-19",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "018-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from RMS to SBK on 2024-12-25.",
+      "Maybe change my travel date to 2024-09-19, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-09-19",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-09-19",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "018-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from RMS to SBK on 2024-09-19.",
+      "Maybe change my travel date to 2024-12-25, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_date": "2024-09-19",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-25",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-09-19",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "018-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from RMS to SBK on 2024-12-25.",
+      "Actually, forget my travel date."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-09-19",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "018-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to RMS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-09-19",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "019-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from CRH to SFO.",
+      "Actually, change my departure to LAX."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "SFO",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "LAX",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "SFO",
+      "travel_date": "2024-12-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "019-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from CRH to SFO.",
+      "Actually, I would prefer LAX as my departure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "SFO",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "LAX",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "SFO",
+      "travel_date": "2024-12-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "019-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from CRH to SFO.",
+      "Maybe change my departure to LAX, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "SFO",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "LAX",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "SFO",
+      "travel_date": "2024-12-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "019-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from LAX to SFO.",
+      "Maybe change my departure to CRH, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LAX",
+        "travel_to": "SFO",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "CRH",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "SFO",
+      "travel_date": "2024-12-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "019-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from CRH to SFO.",
+      "Actually, forget my departure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "CRH",
+        "travel_to": "SFO",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "SFO",
+      "travel_date": "2024-12-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "019-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to LAX."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "LAX",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "LAX",
+      "travel_to": "SFO",
+      "travel_date": "2024-12-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "020-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from RMS to ATV.",
+      "Actually, change my destination to SBK."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "SBK",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "020-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from RMS to ATV.",
+      "Actually, I would prefer SBK as my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "SBK",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "020-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from RMS to ATV.",
+      "Maybe change my destination to SBK, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "SBK",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "020-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from RMS to SBK.",
+      "Maybe change my destination to ATV, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "ATV",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "020-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from RMS to ATV.",
+      "Actually, forget my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "020-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to RMS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-12-15",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "021-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from SFO to CIA, economy class.",
+      "Actually, change my travel class to business."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "CIA",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "business",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "CIA",
+      "travel_date": "2024-10-10",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "021-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from SFO to CIA, economy class.",
+      "Actually, I would prefer business class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "CIA",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "business",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "CIA",
+      "travel_date": "2024-10-10",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "021-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from SFO to CIA, economy class.",
+      "Maybe change my travel class to business, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "CIA",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "business",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "CIA",
+      "travel_date": "2024-10-10",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "021-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from SFO to CIA, business class.",
+      "Maybe change my travel class to economy, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "CIA",
+        "travel_class": "business",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "economy",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "CIA",
+      "travel_date": "2024-10-10",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "021-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from SFO to CIA, economy class.",
+      "Actually, forget my travel class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "CIA",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "CIA",
+      "travel_date": "2024-10-10",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "021-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to SFO."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "CIA",
+      "travel_date": "2024-10-10",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "022-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from RMS to JFK on 2024-12-25.",
+      "Actually, change my travel date to 2024-12-15."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "JFK",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-15",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-12-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "022-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from RMS to JFK on 2024-12-25.",
+      "Actually, I would prefer to travel on 2024-12-15."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "JFK",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-15",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-12-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "022-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from RMS to JFK on 2024-12-25.",
+      "Maybe change my travel date to 2024-12-15, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "JFK",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-15",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-12-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "022-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from RMS to JFK on 2024-12-15.",
+      "Maybe change my travel date to 2024-12-25, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "JFK",
+        "travel_date": "2024-12-15",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-25",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-12-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "022-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from RMS to JFK on 2024-12-25.",
+      "Actually, forget my travel date."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "JFK",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-12-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "022-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to RMS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "JFK",
+      "travel_date": "2024-12-15",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "023-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from JFK to LAX.",
+      "Actually, change my departure to SFO."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-25",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "023-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from JFK to LAX.",
+      "Actually, I would prefer SFO as my departure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-25",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "023-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from JFK to LAX.",
+      "Maybe change my departure to SFO, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-25",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "023-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from SFO to LAX.",
+      "Maybe change my departure to JFK, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "JFK",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-25",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "023-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from JFK to LAX.",
+      "Actually, forget my departure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-25",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "023-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to SFO."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-11-25",
+      "travel_class": "business"
+    }
+  },
+  {
+    "id": "024-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from JFK to ATV.",
+      "Actually, change my destination to LAX."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "JFK",
+      "travel_to": "LAX",
+      "travel_date": "2024-10-10",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "024-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from JFK to ATV.",
+      "Actually, I would prefer LAX as my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "LAX",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "JFK",
+      "travel_to": "LAX",
+      "travel_date": "2024-10-10",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "024-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from JFK to ATV.",
+      "Maybe change my destination to LAX, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "LAX",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "JFK",
+      "travel_to": "LAX",
+      "travel_date": "2024-10-10",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "024-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from JFK to LAX.",
+      "Maybe change my destination to ATV, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "LAX",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": "ATV",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "JFK",
+      "travel_to": "LAX",
+      "travel_date": "2024-10-10",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "024-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from JFK to ATV.",
+      "Actually, forget my destination."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "JFK",
+        "travel_to": "ATV",
+        "confidence": "SURE"
+      },
+      {
+        "travel_to": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "JFK",
+      "travel_to": "LAX",
+      "travel_date": "2024-10-10",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "024-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to JFK."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "JFK",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "JFK",
+      "travel_to": "LAX",
+      "travel_date": "2024-10-10",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "025-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from RMS to SBK, business class.",
+      "Actually, change my travel class to economy."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_class": "business",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "economy",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-10-06",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "025-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from RMS to SBK, business class.",
+      "Actually, I would prefer economy class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_class": "business",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "economy",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-10-06",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "025-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from RMS to SBK, business class.",
+      "Maybe change my travel class to economy, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_class": "business",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "economy",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-10-06",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "025-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from RMS to SBK, economy class.",
+      "Maybe change my travel class to business, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_class": "economy",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": "business",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-10-06",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "025-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from RMS to SBK, business class.",
+      "Actually, forget my travel class."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "RMS",
+        "travel_to": "SBK",
+        "travel_class": "business",
+        "confidence": "SURE"
+      },
+      {
+        "travel_class": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-10-06",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "025-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to RMS."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "RMS",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "RMS",
+      "travel_to": "SBK",
+      "travel_date": "2024-10-06",
+      "travel_class": "economy"
+    }
+  },
+  {
+    "id": "026-revise_sure",
+    "kind": "revise_sure",
+    "sentences": [
+      "I want to fly from SFO to LAX on 2024-12-26.",
+      "Actually, change my travel date to 2024-12-25."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-26",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-12-25",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "026-revise_prefer",
+    "kind": "revise_prefer",
+    "sentences": [
+      "I want to fly from SFO to LAX on 2024-12-26.",
+      "Actually, I would prefer to travel on 2024-12-25."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-26",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-25",
+        "confidence": "PREFER"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-12-25",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "026-revise_unsure_new",
+    "kind": "revise_unsure_new",
+    "sentences": [
+      "I want to fly from SFO to LAX on 2024-12-26.",
+      "Maybe change my travel date to 2024-12-25, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-26",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-25",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-12-25",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "026-revise_unsure_old",
+    "kind": "revise_unsure_old",
+    "sentences": [
+      "I want to fly from SFO to LAX on 2024-12-25.",
+      "Maybe change my travel date to 2024-12-26, I'm not sure."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-25",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": "2024-12-26",
+        "confidence": "UNSURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-12-25",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "026-retract",
+    "kind": "retract",
+    "sentences": [
+      "I want to fly from SFO to LAX on 2024-12-26.",
+      "Actually, forget my travel date."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "SFO",
+        "travel_to": "LAX",
+        "travel_date": "2024-12-26",
+        "confidence": "SURE"
+      },
+      {
+        "travel_date": null,
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-12-25",
+      "travel_class": "first"
+    }
+  },
+  {
+    "id": "026-domino",
+    "kind": "domino",
+    "sentences": [
+      "I want to fly from LHR to CDG.",
+      "Actually, change my departure to SFO."
+    ],
+    "expected_turns": [
+      {
+        "travel_from": "LHR",
+        "travel_to": "CDG",
+        "confidence": "SURE"
+      },
+      {
+        "travel_from": "SFO",
+        "confidence": "SURE"
+      }
+    ],
+    "truth": {
+      "travel_from": "SFO",
+      "travel_to": "LAX",
+      "travel_date": "2024-12-25",
+      "travel_class": "first"
+    }
+  }
+]

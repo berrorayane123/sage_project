@@ -1,0 +1,778 @@
+{
+  "{\"last_question\": null, \"sentence\": \"I want to fly from ORD to ATV.\", \"state\": {}}": {
+    "travel_from": "ORD",
+    "travel_to": "ATV",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my destination to LAX.\", \"state\": {\"travel_from\": \"ORD\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "LAX",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer LAX as my destination.\", \"state\": {\"travel_from\": \"ORD\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "LAX",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to LAX, I'm not sure.\", \"state\": {\"travel_from\": \"ORD\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "LAX",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from ORD to LAX.\", \"state\": {}}": {
+    "travel_from": "ORD",
+    "travel_to": "LAX",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to ATV, I'm not sure.\", \"state\": {\"travel_from\": \"ORD\", \"travel_to\": \"LAX\"}}": {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my destination.\", \"state\": {\"travel_from\": \"ORD\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from LHR to CDG.\", \"state\": {}}": {
+    "travel_from": "LHR",
+    "travel_to": "CDG",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my departure to ORD.\", \"state\": {\"travel_from\": \"LHR\", \"travel_to\": \"CDG\"}}": {
+    "travel_from": "ORD",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to JFK, economy class.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_class": "economy",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my travel class to first.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"RMS\", \"travel_to\": \"JFK\"}}": {
+    "travel_class": "first",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer first class.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"RMS\", \"travel_to\": \"JFK\"}}": {
+    "travel_class": "first",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel class to first, I'm not sure.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"RMS\", \"travel_to\": \"JFK\"}}": {
+    "travel_class": "first",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to JFK, first class.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_class": "first",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel class to economy, I'm not sure.\", \"state\": {\"travel_class\": \"first\", \"travel_from\": \"RMS\", \"travel_to\": \"JFK\"}}": {
+    "travel_class": "economy",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my travel class.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"RMS\", \"travel_to\": \"JFK\"}}": {
+    "travel_class": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my departure to RMS.\", \"state\": {\"travel_from\": \"LHR\", \"travel_to\": \"CDG\"}}": {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from SFO to LAX on 2024-12-25.\", \"state\": {}}": {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-25",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my travel date to 2024-11-10.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": "2024-11-10",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer to travel on 2024-11-10.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": "2024-11-10",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-11-10, I'm not sure.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": "2024-11-10",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from SFO to LAX on 2024-11-10.\", \"state\": {}}": {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-11-10",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-12-25, I'm not sure.\", \"state\": {\"travel_date\": \"2024-11-10\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my travel date.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my departure to SFO.\", \"state\": {\"travel_from\": \"LHR\", \"travel_to\": \"CDG\"}}": {
+    "travel_from": "SFO",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from CRH to JFK.\", \"state\": {}}": {
+    "travel_from": "CRH",
+    "travel_to": "JFK",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my departure to LAX.\", \"state\": {\"travel_from\": \"CRH\", \"travel_to\": \"JFK\"}}": {
+    "travel_from": "LAX",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer LAX as my departure.\", \"state\": {\"travel_from\": \"CRH\", \"travel_to\": \"JFK\"}}": {
+    "travel_from": "LAX",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my departure to LAX, I'm not sure.\", \"state\": {\"travel_from\": \"CRH\", \"travel_to\": \"JFK\"}}": {
+    "travel_from": "LAX",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from LAX to JFK.\", \"state\": {}}": {
+    "travel_from": "LAX",
+    "travel_to": "JFK",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my departure to CRH, I'm not sure.\", \"state\": {\"travel_from\": \"LAX\", \"travel_to\": \"JFK\"}}": {
+    "travel_from": "CRH",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my departure.\", \"state\": {\"travel_from\": \"CRH\", \"travel_to\": \"JFK\"}}": {
+    "travel_from": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my departure to LAX.\", \"state\": {\"travel_from\": \"LHR\", \"travel_to\": \"CDG\"}}": {
+    "travel_from": "LAX",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from CRH to ATV.\", \"state\": {}}": {
+    "travel_from": "CRH",
+    "travel_to": "ATV",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my destination to RMS.\", \"state\": {\"travel_from\": \"CRH\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "RMS",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer RMS as my destination.\", \"state\": {\"travel_from\": \"CRH\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "RMS",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to RMS, I'm not sure.\", \"state\": {\"travel_from\": \"CRH\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "RMS",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from CRH to RMS.\", \"state\": {}}": {
+    "travel_from": "CRH",
+    "travel_to": "RMS",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to ATV, I'm not sure.\", \"state\": {\"travel_from\": \"CRH\", \"travel_to\": \"RMS\"}}": {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my destination.\", \"state\": {\"travel_from\": \"CRH\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from JFK to BOS.\", \"state\": {}}": {
+    "travel_from": "JFK",
+    "travel_to": "BOS",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my departure to CRH.\", \"state\": {\"travel_from\": \"JFK\", \"travel_to\": \"BOS\"}}": {
+    "travel_from": "CRH",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to LAX, economy class.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_class": "economy",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my travel class to business.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"RMS\", \"travel_to\": \"LAX\"}}": {
+    "travel_class": "business",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer business class.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"RMS\", \"travel_to\": \"LAX\"}}": {
+    "travel_class": "business",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel class to business, I'm not sure.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"RMS\", \"travel_to\": \"LAX\"}}": {
+    "travel_class": "business",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to LAX, business class.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_class": "business",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel class to economy, I'm not sure.\", \"state\": {\"travel_class\": \"business\", \"travel_from\": \"RMS\", \"travel_to\": \"LAX\"}}": {
+    "travel_class": "economy",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my travel class.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"RMS\", \"travel_to\": \"LAX\"}}": {
+    "travel_class": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to LAX on 2024-12-25.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-25",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my travel date to 2024-12-15.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"RMS\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": "2024-12-15",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer to travel on 2024-12-15.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"RMS\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": "2024-12-15",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-12-15, I'm not sure.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"RMS\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": "2024-12-15",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to LAX on 2024-12-15.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-15",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-12-25, I'm not sure.\", \"state\": {\"travel_date\": \"2024-12-15\", \"travel_from\": \"RMS\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my travel date.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"RMS\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from ATV to GFD.\", \"state\": {}}": {
+    "travel_from": "ATV",
+    "travel_to": "GFD",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my departure to RMS.\", \"state\": {\"travel_from\": \"ATV\", \"travel_to\": \"GFD\"}}": {
+    "travel_from": "RMS",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer RMS as my departure.\", \"state\": {\"travel_from\": \"ATV\", \"travel_to\": \"GFD\"}}": {
+    "travel_from": "RMS",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my departure to RMS, I'm not sure.\", \"state\": {\"travel_from\": \"ATV\", \"travel_to\": \"GFD\"}}": {
+    "travel_from": "RMS",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to GFD.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "GFD",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my departure to ATV, I'm not sure.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"GFD\"}}": {
+    "travel_from": "ATV",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my departure.\", \"state\": {\"travel_from\": \"ATV\", \"travel_to\": \"GFD\"}}": {
+    "travel_from": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from SFO to ATV.\", \"state\": {}}": {
+    "travel_from": "SFO",
+    "travel_to": "ATV",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my destination to LAX.\", \"state\": {\"travel_from\": \"SFO\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "LAX",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer LAX as my destination.\", \"state\": {\"travel_from\": \"SFO\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "LAX",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to LAX, I'm not sure.\", \"state\": {\"travel_from\": \"SFO\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "LAX",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from SFO to LAX.\", \"state\": {}}": {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to ATV, I'm not sure.\", \"state\": {\"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my destination.\", \"state\": {\"travel_from\": \"SFO\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from SFO to ORD, economy class.\", \"state\": {}}": {
+    "travel_from": "SFO",
+    "travel_to": "ORD",
+    "travel_class": "economy",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my travel class to first.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"SFO\", \"travel_to\": \"ORD\"}}": {
+    "travel_class": "first",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer first class.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"SFO\", \"travel_to\": \"ORD\"}}": {
+    "travel_class": "first",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel class to first, I'm not sure.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"SFO\", \"travel_to\": \"ORD\"}}": {
+    "travel_class": "first",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from SFO to ORD, first class.\", \"state\": {}}": {
+    "travel_from": "SFO",
+    "travel_to": "ORD",
+    "travel_class": "first",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel class to economy, I'm not sure.\", \"state\": {\"travel_class\": \"first\", \"travel_from\": \"SFO\", \"travel_to\": \"ORD\"}}": {
+    "travel_class": "economy",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my travel class.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"SFO\", \"travel_to\": \"ORD\"}}": {
+    "travel_class": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from CRH to PHV on 2024-12-25.\", \"state\": {}}": {
+    "travel_from": "CRH",
+    "travel_to": "PHV",
+    "travel_date": "2024-12-25",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my travel date to 2024-03-03.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"CRH\", \"travel_to\": \"PHV\"}}": {
+    "travel_date": "2024-03-03",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer to travel on 2024-03-03.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"CRH\", \"travel_to\": \"PHV\"}}": {
+    "travel_date": "2024-03-03",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-03-03, I'm not sure.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"CRH\", \"travel_to\": \"PHV\"}}": {
+    "travel_date": "2024-03-03",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from CRH to PHV on 2024-03-03.\", \"state\": {}}": {
+    "travel_from": "CRH",
+    "travel_to": "PHV",
+    "travel_date": "2024-03-03",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-12-25, I'm not sure.\", \"state\": {\"travel_date\": \"2024-03-03\", \"travel_from\": \"CRH\", \"travel_to\": \"PHV\"}}": {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my travel date.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"CRH\", \"travel_to\": \"PHV\"}}": {
+    "travel_date": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from BOS to SVP.\", \"state\": {}}": {
+    "travel_from": "BOS",
+    "travel_to": "SVP",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my departure to ORD.\", \"state\": {\"travel_from\": \"BOS\", \"travel_to\": \"SVP\"}}": {
+    "travel_from": "ORD",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer ORD as my departure.\", \"state\": {\"travel_from\": \"BOS\", \"travel_to\": \"SVP\"}}": {
+    "travel_from": "ORD",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my departure to ORD, I'm not sure.\", \"state\": {\"travel_from\": \"BOS\", \"travel_to\": \"SVP\"}}": {
+    "travel_from": "ORD",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from ORD to SVP.\", \"state\": {}}": {
+    "travel_from": "ORD",
+    "travel_to": "SVP",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my departure to BOS, I'm not sure.\", \"state\": {\"travel_from\": \"ORD\", \"travel_to\": \"SVP\"}}": {
+    "travel_from": "BOS",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my departure.\", \"state\": {\"travel_from\": \"BOS\", \"travel_to\": \"SVP\"}}": {
+    "travel_from": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to ATV.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "ATV",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my destination to BOS.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "BOS",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer BOS as my destination.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "BOS",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to BOS, I'm not sure.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "BOS",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to BOS.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "BOS",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to ATV, I'm not sure.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"BOS\"}}": {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my destination.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from SFO to LAX, economy class.\", \"state\": {}}": {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_class": "economy",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my travel class to first.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_class": "first",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer first class.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_class": "first",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel class to first, I'm not sure.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_class": "first",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from SFO to LAX, first class.\", \"state\": {}}": {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_class": "first",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel class to economy, I'm not sure.\", \"state\": {\"travel_class\": \"first\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_class": "economy",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my travel class.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_class": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from LAX to JFK on 2024-12-25.\", \"state\": {}}": {
+    "travel_from": "LAX",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-25",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my travel date to 2024-11-15.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"LAX\", \"travel_to\": \"JFK\"}}": {
+    "travel_date": "2024-11-15",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer to travel on 2024-11-15.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"LAX\", \"travel_to\": \"JFK\"}}": {
+    "travel_date": "2024-11-15",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-11-15, I'm not sure.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"LAX\", \"travel_to\": \"JFK\"}}": {
+    "travel_date": "2024-11-15",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from LAX to JFK on 2024-11-15.\", \"state\": {}}": {
+    "travel_from": "LAX",
+    "travel_to": "JFK",
+    "travel_date": "2024-11-15",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-12-25, I'm not sure.\", \"state\": {\"travel_date\": \"2024-11-15\", \"travel_from\": \"LAX\", \"travel_to\": \"JFK\"}}": {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my travel date.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"LAX\", \"travel_to\": \"JFK\"}}": {
+    "travel_date": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from JFK to LAX.\", \"state\": {}}": {
+    "travel_from": "JFK",
+    "travel_to": "LAX",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my departure to SFO.\", \"state\": {\"travel_from\": \"JFK\", \"travel_to\": \"LAX\"}}": {
+    "travel_from": "SFO",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer SFO as my departure.\", \"state\": {\"travel_from\": \"JFK\", \"travel_to\": \"LAX\"}}": {
+    "travel_from": "SFO",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my departure to SFO, I'm not sure.\", \"state\": {\"travel_from\": \"JFK\", \"travel_to\": \"LAX\"}}": {
+    "travel_from": "SFO",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my departure to JFK, I'm not sure.\", \"state\": {\"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_from": "JFK",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my departure.\", \"state\": {\"travel_from\": \"JFK\", \"travel_to\": \"LAX\"}}": {
+    "travel_from": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my destination to JFK.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "JFK",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer JFK as my destination.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "JFK",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to JFK, I'm not sure.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "JFK",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to JFK.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to ATV, I'm not sure.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"JFK\"}}": {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to SBK, business class.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_class": "business",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my travel class to economy.\", \"state\": {\"travel_class\": \"business\", \"travel_from\": \"RMS\", \"travel_to\": \"SBK\"}}": {
+    "travel_class": "economy",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer economy class.\", \"state\": {\"travel_class\": \"business\", \"travel_from\": \"RMS\", \"travel_to\": \"SBK\"}}": {
+    "travel_class": "economy",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel class to economy, I'm not sure.\", \"state\": {\"travel_class\": \"business\", \"travel_from\": \"RMS\", \"travel_to\": \"SBK\"}}": {
+    "travel_class": "economy",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to SBK, economy class.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_class": "economy",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel class to business, I'm not sure.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"RMS\", \"travel_to\": \"SBK\"}}": {
+    "travel_class": "business",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my travel class.\", \"state\": {\"travel_class\": \"business\", \"travel_from\": \"RMS\", \"travel_to\": \"SBK\"}}": {
+    "travel_class": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to SBK on 2024-12-25.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_date": "2024-12-25",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my travel date to 2024-09-19.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"RMS\", \"travel_to\": \"SBK\"}}": {
+    "travel_date": "2024-09-19",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer to travel on 2024-09-19.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"RMS\", \"travel_to\": \"SBK\"}}": {
+    "travel_date": "2024-09-19",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-09-19, I'm not sure.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"RMS\", \"travel_to\": \"SBK\"}}": {
+    "travel_date": "2024-09-19",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to SBK on 2024-09-19.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "travel_date": "2024-09-19",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-12-25, I'm not sure.\", \"state\": {\"travel_date\": \"2024-09-19\", \"travel_from\": \"RMS\", \"travel_to\": \"SBK\"}}": {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my travel date.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"RMS\", \"travel_to\": \"SBK\"}}": {
+    "travel_date": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from CRH to SFO.\", \"state\": {}}": {
+    "travel_from": "CRH",
+    "travel_to": "SFO",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my departure to LAX.\", \"state\": {\"travel_from\": \"CRH\", \"travel_to\": \"SFO\"}}": {
+    "travel_from": "LAX",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer LAX as my departure.\", \"state\": {\"travel_from\": \"CRH\", \"travel_to\": \"SFO\"}}": {
+    "travel_from": "LAX",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my departure to LAX, I'm not sure.\", \"state\": {\"travel_from\": \"CRH\", \"travel_to\": \"SFO\"}}": {
+    "travel_from": "LAX",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from LAX to SFO.\", \"state\": {}}": {
+    "travel_from": "LAX",
+    "travel_to": "SFO",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my departure to CRH, I'm not sure.\", \"state\": {\"travel_from\": \"LAX\", \"travel_to\": \"SFO\"}}": {
+    "travel_from": "CRH",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my departure.\", \"state\": {\"travel_from\": \"CRH\", \"travel_to\": \"SFO\"}}": {
+    "travel_from": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my destination to SBK.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "SBK",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer SBK as my destination.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "SBK",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to SBK, I'm not sure.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "SBK",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to SBK.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "SBK",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to ATV, I'm not sure.\", \"state\": {\"travel_from\": \"RMS\", \"travel_to\": \"SBK\"}}": {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from SFO to CIA, economy class.\", \"state\": {}}": {
+    "travel_from": "SFO",
+    "travel_to": "CIA",
+    "travel_class": "economy",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my travel class to business.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"SFO\", \"travel_to\": \"CIA\"}}": {
+    "travel_class": "business",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer business class.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"SFO\", \"travel_to\": \"CIA\"}}": {
+    "travel_class": "business",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel class to business, I'm not sure.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"SFO\", \"travel_to\": \"CIA\"}}": {
+    "travel_class": "business",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from SFO to CIA, business class.\", \"state\": {}}": {
+    "travel_from": "SFO",
+    "travel_to": "CIA",
+    "travel_class": "business",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel class to economy, I'm not sure.\", \"state\": {\"travel_class\": \"business\", \"travel_from\": \"SFO\", \"travel_to\": \"CIA\"}}": {
+    "travel_class": "economy",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my travel class.\", \"state\": {\"travel_class\": \"economy\", \"travel_from\": \"SFO\", \"travel_to\": \"CIA\"}}": {
+    "travel_class": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to JFK on 2024-12-25.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-25",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my travel date to 2024-12-15.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"RMS\", \"travel_to\": \"JFK\"}}": {
+    "travel_date": "2024-12-15",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer to travel on 2024-12-15.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"RMS\", \"travel_to\": \"JFK\"}}": {
+    "travel_date": "2024-12-15",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-12-15, I'm not sure.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"RMS\", \"travel_to\": \"JFK\"}}": {
+    "travel_date": "2024-12-15",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from RMS to JFK on 2024-12-15.\", \"state\": {}}": {
+    "travel_from": "RMS",
+    "travel_to": "JFK",
+    "travel_date": "2024-12-15",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-12-25, I'm not sure.\", \"state\": {\"travel_date\": \"2024-12-15\", \"travel_from\": \"RMS\", \"travel_to\": \"JFK\"}}": {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my travel date.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"RMS\", \"travel_to\": \"JFK\"}}": {
+    "travel_date": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from JFK to ATV.\", \"state\": {}}": {
+    "travel_from": "JFK",
+    "travel_to": "ATV",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my destination to LAX.\", \"state\": {\"travel_from\": \"JFK\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "LAX",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer LAX as my destination.\", \"state\": {\"travel_from\": \"JFK\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "LAX",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to LAX, I'm not sure.\", \"state\": {\"travel_from\": \"JFK\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": "LAX",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my destination to ATV, I'm not sure.\", \"state\": {\"travel_from\": \"JFK\", \"travel_to\": \"LAX\"}}": {
+    "travel_to": "ATV",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my destination.\", \"state\": {\"travel_from\": \"JFK\", \"travel_to\": \"ATV\"}}": {
+    "travel_to": null,
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my departure to JFK.\", \"state\": {\"travel_from\": \"LHR\", \"travel_to\": \"CDG\"}}": {
+    "travel_from": "JFK",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"I want to fly from SFO to LAX on 2024-12-26.\", \"state\": {}}": {
+    "travel_from": "SFO",
+    "travel_to": "LAX",
+    "travel_date": "2024-12-26",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, change my travel date to 2024-12-25.\", \"state\": {\"travel_date\": \"2024-12-26\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": "2024-12-25",
+    "confidence": "SURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, I would prefer to travel on 2024-12-25.\", \"state\": {\"travel_date\": \"2024-12-26\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": "2024-12-25",
+    "confidence": "PREFER"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-12-25, I'm not sure.\", \"state\": {\"travel_date\": \"2024-12-26\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": "2024-12-25",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Maybe change my travel date to 2024-12-26, I'm not sure.\", \"state\": {\"travel_date\": \"2024-12-25\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": "2024-12-26",
+    "confidence": "UNSURE"
+  },
+  "{\"last_question\": null, \"sentence\": \"Actually, forget my travel date.\", \"state\": {\"travel_date\": \"2024-12-26\", \"travel_from\": \"SFO\", \"travel_to\": \"LAX\"}}": {
+    "travel_date": null,
+    "confidence": "SURE"
+  }
+}

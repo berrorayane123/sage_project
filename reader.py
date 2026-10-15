@@ -93,54 +93,138 @@ def find_airport(text):
 def simple_reader(message, state=None):
     text = message.lower()
     turn = {}
+
+    # Handle retractions
     if any(w in text for w in ["forget", "remove", "ignore"]):
         if any(w in text for w in ["destination", "to ", "going"]):
             turn["travel_to"] = None
-        elif any(w in text for w in ["origin", "from", "leaving"]):
+        elif any(w in text for w in ["origin", "departure", "from", "leaving"]):
             turn["travel_from"] = None
         elif "date" in text:
             turn["travel_date"] = None
         elif "class" in text:
             turn["travel_class"] = None
+
         turn["confidence"] = "SURE"
         return turn
+
+    # Find airports/cities
     places = []
     rest = text
+
     while True:
         code, pos = find_airport(rest)
+
         if code is None:
             break
+
         places.append((code, rest[:pos]))
-        word = re.match(r"[a-z.]+(?: [a-z]+)?", rest[pos:]).group()
-        names = [c.lower() for c in CITIES if CITIES[c] == code] + [a for a in ALIASES if ALIASES[a] == code] + [code.lower()]
-        hit = next((n for n in sorted(names, key=len, reverse=True) if rest[pos:].startswith(n)), word)
-        rest = rest[:pos] + " " * len(hit) + rest[pos + len(hit):]       # blank it out, look for the next one
+
+        word = re.match(
+            r"[a-z.]+(?: [a-z]+)?",
+            rest[pos:]
+        ).group()
+
+        names = (
+            [c.lower() for c in CITIES if CITIES[c] == code]
+            + [a for a in ALIASES if ALIASES[a] == code]
+            + [code.lower()]
+        )
+
+        hit = next(
+            (
+                n
+                for n in sorted(names, key=len, reverse=True)
+                if rest[pos:].startswith(n)
+            ),
+            word,
+        )
+
+        # Blank the airport/city already found so we can find another one
+        rest = rest[:pos] + " " * len(hit) + rest[pos + len(hit):]
+
+    # Special case:
+    # "Actually, change my departure to ORD."
+    if len(places) == 1 and "departure" in text:
+        turn["travel_from"] = places[0][0]
+        places = []
+
+    # Special case:
+    # "change my departure from San Francisco to Los Angeles"
+    if (
+        len(places) == 2
+        and "departure" in text
+        and "from" in text
+        and " to " in text
+    ):
+        turn["travel_from"] = places[1][0]
+        places = []
+
+    # Special case:
+    # "Los Angeles instead of New York"
+    if "instead of" in text and len(places) == 2:
+        turn["travel_to"] = places[0][0]
+        places = []
+
+    # Normal origin/destination extraction
     for code, before in places:
-        if re.search(r"from\s*$", before.strip() + " ") or before.strip().endswith("from"):
+        if (
+            re.search(r"from\s*$", before.strip() + " ")
+            or before.strip().endswith("from")
+        ):
             turn["travel_from"] = code
         else:
-            turn.setdefault("travel_to", code) if "travel_to" not in turn else turn.setdefault("travel_from", code)
+            if "travel_to" not in turn:
+                turn["travel_to"] = code
+            else:
+                turn.setdefault("travel_from", code)
+
+    # Normal "from X to Y"
     if len(places) == 2 and "from" in text and "travel_from" not in turn:
-        turn["travel_from"], turn["travel_to"] = places[0][0], places[1][0]
+        turn["travel_from"] = places[0][0]
+        turn["travel_to"] = places[1][0]
+
+    # Travel class
     for cls in ["economy", "business", "first"]:
         if cls in text:
             turn["travel_class"] = cls
+
+    # ISO date: YYYY-MM-DD
     iso = re.search(r"\d{4}-\d{2}-\d{2}", text)
+
     if iso:
         turn["travel_date"] = iso.group()
+
     else:
-        m = re.search(r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*\s+(\d{1,2})", text)
+        # Dates such as August 10th, 2024
+        m = re.search(
+            r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)"
+            r"\w*\s+(\d{1,2})(?:st|nd|rd|th)?(?:,?\s+(\d{4}))?",
+            text,
+        )
+
         if m:
-            year = datetime.date.today().year
-            turn["travel_date"] = f"{year}-{MONTHS[m.group(1)]:02d}-{int(m.group(2)):02d}"
+            year = (
+                int(m.group(3))
+                if m.group(3)
+                else datetime.date.today().year
+            )
+
+            turn["travel_date"] = (
+                f"{year}-{MONTHS[m.group(1)]:02d}-{int(m.group(2)):02d}"
+            )
+
+    # Confidence
     if any(w in text for w in HEDGE_UNSURE):
         turn["confidence"] = "UNSURE"
+
     elif any(w in text for w in HEDGE_PREFER):
         turn["confidence"] = "PREFER"
+
     else:
         turn["confidence"] = "SURE"
-    return turn
 
+    return turn
 
 def to_turn(data):
     values = data.get("values", {}) or {}
