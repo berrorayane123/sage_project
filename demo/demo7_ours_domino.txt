@@ -1,0 +1,33 @@
+$ python chat.py ours
+=== Flight assistant (ours) - type 'quit' to stop ===
+
+YOU  : I want to fly from San Francisco to New York on 2026-11-05
+   (reader: {'travel_from': 'SFO', 'travel_to': 'JFK', 'travel_date': '2026-11-05', 'confidence': 'SURE'})
+   LEDGER: travel_from ADDED SFO
+   LEDGER: travel_to ADDED JFK
+   LEDGER: travel_date ADDED 2026-11-05
+   STATE: {'travel_from': 'SFO', 'travel_to': 'JFK', 'travel_date': '2026-11-05', 'travel_class': None}
+   travel_class  EVPI=0.6667  penalty=0.0  -> 0.6667
+AGENT: What is the travel_class? Options: ['economy', 'business', 'first']
+
+YOU  : Business. Actually I will leave from Chicago
+   (reader: {'travel_from': 'ORD', 'travel_class': 'business', 'confidence': 'SURE'})
+   LEDGER: travel_from REPLACED SFO -> {'ORD': 0.95, 'SFO': 0.05}
+   LEDGER: travel_class ADDED business
+   DOMINO: travel_from changed -> check travel_to: no flight ORD -> JFK -> reopen travel_to
+   STATE: {'travel_from': {'ORD': 0.95, 'SFO': 0.05}, 'travel_to': None, 'travel_date': '2026-11-05', 'travel_class': 'business'}
+   travel_from   EVPI=0.0021  penalty=0.0  -> 0.0021
+   travel_to     EVPI=0.9104  penalty=0.0  -> 0.9104
+AGENT: What is the travel_to? Options: ['ATV', 'BOS', 'CRH', 'GFD', 'LAX', 'MPC', 'OKD', 'PHV', 'RMS', 'SBK', 'SHD', 'SSV', 'SVP', 'WLB']
+
+YOU  : Los Angeles
+   (reader: {'travel_to': 'LAX', 'confidence': 'SURE'})
+   LEDGER: travel_to ADDED LAX
+   STATE: {'travel_from': {'ORD': 0.95, 'SFO': 0.05}, 'travel_to': 'LAX', 'travel_date': '2026-11-05', 'travel_class': 'business'}
+AGENT: OK! get_flight_cost({'travel_from': 'ORD', 'travel_to': 'LAX', 'travel_date': '2026-11-05', 'travel_class': 'business'})
+TOOL : {'travel_cost': 360.0}
+   --- LEDGER ---
+   travel_from   crossed out: ['SFO (turn 2)']  epoch: 1
+   travel_to     crossed out: ['JFK (turn 2)']  epoch: 1
+   travel_date   crossed out: []  epoch: 0
+   travel_class  crossed out: []  epoch: 0
