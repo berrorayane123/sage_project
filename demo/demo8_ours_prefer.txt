@@ -1,0 +1,5 @@
+# The user PREFERS a change. Ours asks to confirm.
+version: ours
+I want to fly from San Francisco to New York on 2026-11-05
+Economy. Los Angeles would be better I think
+Yes, Los Angeles

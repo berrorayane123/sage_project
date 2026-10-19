@@ -1,0 +1,4 @@
+# A normal user, no change of mind. Ours just asks what is missing.
+version: ours
+I want to fly from San Francisco to New York on 2026-11-05
+Economy

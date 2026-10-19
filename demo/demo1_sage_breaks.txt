@@ -1,13 +1,4 @@
-$ python chat.py sage
-=== Flight assistant (sage) - type 'quit' to stop ===
-
-YOU  : I want to fly from San Francisco to New York on 2026-11-05
-   (reader: {'travel_from': 'SFO', 'travel_to': 'JFK', 'travel_date': '2026-11-05', 'confidence': 'SURE'})
-   STATE: {'travel_from': 'SFO', 'travel_to': 'JFK', 'travel_date': '2026-11-05', 'travel_class': None}
-   travel_class  EVPI=0.6667  penalty=0.0  -> 0.6667
-AGENT: What is the travel_class? Options: ['economy', 'business', 'first']
-
-YOU  : Economy. Actually, make it Los Angeles
-   (reader: {'travel_to': 'LAX', 'travel_class': 'economy', 'confidence': 'SURE'})
-   BROKEN: travel_to -> JFK ∩ LAX = ∅   (SAGE cannot change a value)
-AGENT: Sorry, I'm stuck. (This is the SAGE limitation.)
+# The user changes their mind. The SAGE surrogate gets stuck.
+version: sage
+I want to fly from San Francisco to New York on 2026-11-05
+Economy. Actually, make it Los Angeles

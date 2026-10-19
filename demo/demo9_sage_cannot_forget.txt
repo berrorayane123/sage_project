@@ -1,0 +1,6 @@
+# The user says 'forget it'. The SAGE surrogate cannot forget.
+version: sage
+I want to fly from San Francisco to New York on 2026-11-05
+Forget the destination I gave you
+Boston
+Economy
