@@ -8,7 +8,7 @@ OURS, OTHER = "#2a78d6", "#b9b8b2"                       # highlight our method,
 BLUES = ["#e8f1fd", "#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#104281"]
 
 METHODS = ["sage", "ledger", "ledger+confidence", "ledger+domino", "always_confirm", "ours"]
-NAMES = {"sage": "SAGE (paper)", "ledger": "+ Ledger", "ledger+confidence": "+ Ledger + Confidence",
+NAMES = {"sage":  "SAGE-style baseline", "ledger": "+ Ledger", "ledger+confidence": "+ Ledger + Confidence",
          "ledger+domino": "+ Ledger + Domino", "always_confirm": "Always confirm", "ours": "OURS (full)"}
 REVISE = ["revise_sure", "revise_prefer", "revise_unsure_new", "revise_unsure_old", "retract", "domino"]
 TYPE_NAMES = ["Sure", "Prefer", "Unsure\n(new)", "Unsure\n(old)", "Forget it", "Domino"]
