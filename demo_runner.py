@@ -4,6 +4,7 @@
 #   python demo_runner.py 5        -> plays demo 5 (press Enter to send each user message)
 #   python demo_runner.py 5 auto   -> plays demo 5 without waiting for Enter
 #   python demo_runner.py 2 8 5    -> plays several demos one after another (e.g. the 3 confidence weights)
+#   python demo_runner.py 5 offline -> uses the backup reader instead of Gemini (no internet / Google busy)
 import builtins, sys, os, glob, runpy
 
 DEMO_DIR = "demo"
@@ -31,10 +32,10 @@ def demo_files():
     return {number(p): p for p in files}
 
 
-def play(path, wait=True):
+def play(path, wait=True, offline=False):
     description, version, messages = load(path)
     print(f"===== {os.path.basename(path)} =====")
-    print(f"{description}\n$ python chat.py {version}")
+    print(f"{description}\n$ python chat.py {version}{' offline' if offline else ''}")
     remaining = iter(messages + ["quit"])
     real_input = builtins.input
     def fake_input(prompt=""):
@@ -44,7 +45,7 @@ def play(path, wait=True):
         print(prompt + message)                      # the user's message; chat.py then answers live
         return message
     real_argv = sys.argv
-    builtins.input, sys.argv = fake_input, ["chat.py", version]
+    builtins.input, sys.argv = fake_input, ["chat.py", version] + (["offline"] if offline else [])
     try:
         runpy.run_path("chat.py", run_name="__main__")
     finally:
@@ -60,7 +61,8 @@ if __name__ == "__main__":
     else:
         args = sys.argv[1:]
         wait = "auto" not in args
-        chosen = [a for a in args if a != "auto"]
+        offline = "offline" in args
+        chosen = [a for a in args if a not in ("auto", "offline")]
         for i, arg in enumerate(chosen):
             path = demos.get(int(arg)) if arg.isdigit() else arg
             if not path or not os.path.exists(path):
@@ -69,4 +71,4 @@ if __name__ == "__main__":
                 print("\n" + "=" * 70)
                 if wait:
                     input("   [press Enter to start the next demo]")
-            play(path, wait=wait)
+            play(path, wait=wait, offline=offline)

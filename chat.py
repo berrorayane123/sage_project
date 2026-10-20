@@ -1,13 +1,16 @@
 # ===== chat.py: LIVE demo - type anything, the agent answers =====
 #   python chat.py          -> our full method
 #   python chat.py sage     -> original SAGE (to show it breaking)
+#   add "offline" to use the backup reader instead of Gemini:  python chat.py ours offline
 import sys
 from agent import (tools, METHODS, CONFIDENCE, new_ledger, update, update_ledger, domino,
                    decide, execute, top, show_ledger)
-from reader import read_message
+from reader import read_message, simple_reader
 
 TOOL = "get_flight_cost"
-method = sys.argv[1] if len(sys.argv) > 1 else "ours"
+OFFLINE = "offline" in sys.argv                    # no internet / Google busy -> backup reader
+args = [a for a in sys.argv[1:] if a != "offline"]
+method = args[0] if args else "ours"
 cfg = METHODS[method]
 
 state = {p: None for p in tools[TOOL]}
@@ -15,14 +18,15 @@ ledger = new_ledger(TOOL)
 asked = {p: 0 for p in tools[TOOL]}
 last_question, turn_number = None, 0
 
-print(f"=== Flight assistant ({method}) - type 'quit' to stop ===")
+print(f"=== Flight assistant ({method}{', offline reader' if OFFLINE else ''}) - type 'quit' to stop ===")
 while True:
     message = input("\nYOU  : ").strip()
     if message.lower() in ("quit", "exit"):
         break
     turn_number += 1
-    turn = read_message(message, {p: top(v) for p, v in state.items()}, last_question)
-    print(f"   (Gemini read: {turn})")
+    known = {p: top(v) for p, v in state.items()}
+    turn = simple_reader(message, known) if OFFLINE else read_message(message, known, last_question)
+    print(f"   (reader: {turn})")
     category = turn.pop("confidence", "SURE")
     changed = []
     broken = False
